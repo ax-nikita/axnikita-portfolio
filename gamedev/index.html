@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+
+<html data-lang="ru" lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="GameDev-проекты axnikita / Zonov Nikita: game systems, balance, modding, content tooling, C++, JavaScript, PHP, XML/JSON." name="description"/>
+<title>Nikita — GameDev Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&amp;family=Unbounded:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+
+<link rel="stylesheet" href="../assets/css/gamedev.css"/>
+</head>
+<body>
+<a class="skip-link" href="#main">К содержимому</a>
+<div class="site-shell">
+<header class="site-header">
+<div class="header-inner">
+<a class="brand" href="../#about">
+<span aria-hidden="true" class="brand-mark"></span>
+        axnikita / Zonov Nikita
+      </a>
+<p class="role">Developer · Game systems / balance / tooling</p>
+<div class="header-actions">
+<nav aria-label="Основная навигация" class="site-nav">
+<ul>
+<li><a data-copy="navAbout" href="../#about">Обо мне</a></li>
+<li><a data-copy="navWeb" href="../web/#web-top">WEB</a></li>
+<li><a aria-current="page" data-copy="navGame" href="./#game-top">GameDev</a></li>
+</ul>
+</nav>
+<div aria-label="Язык" class="language-switcher">
+<button aria-pressed="true" class="lang-button" data-lang-button="ru" type="button">RU</button>
+<button aria-pressed="false" class="lang-button" data-lang-button="en" type="button">EN</button>
+</div>
+</div>
+</div>
+</header>
+<main id="main">
+<section aria-labelledby="game-title" class="web-hero" id="game-top">
+<div class="page-shell">
+<div class="hero-grid">
+<p aria-hidden="true" class="hero-index">GAME</p>
+<div>
+<p class="eyebrow" data-copy="heroEyebrow">Портфолио / GameDev / 2018—2026</p>
+<h1 id="game-title">GAMEDEV<br/>PROJECTS.<span data-copy="heroTitleAccent">Systems / Balance / Tooling.</span></h1>
+</div>
+<div class="hero-copy">
+<div aria-label="Кратко о GameDev-портфолио" class="hero-snapshot">
+<div class="hero-snapshot-main">
+<strong>04</strong>
+<span data-copy="snapshotCases">кейса</span>
+</div>
+<div class="hero-snapshot-row">
+<span data-copy="snapshotPeriod">GameDev / modding</span>
+<strong>2018—2026</strong>
+</div>
+<div class="hero-snapshot-row">
+<span data-copy="snapshotCore">Основной фокус</span>
+<strong>Systems · Balance · Tooling</strong>
+</div>
+</div>
+<p data-copy="heroText">
+            Собственные игры и моды: от консольного C++ roguelike до системного моддинга,
+            data-driven баланса и инструментов, которые генерируют контент и проверяют его численно.
+          </p>
+<ul class="hero-meta">
+<li>axnikita / Zonov Nikita</li>
+<li>C++ · JS · PHP · XML</li>
+<li>Nexus / Steam Workshop</li>
+<li data-copy="snapshotOrder">Актуальные сначала</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<nav aria-label="Навигация по GameDev-кейсам" class="case-index">
+<div class="page-shell">
+<ol class="case-index-list">
+<li><a aria-label="01. KazAXLibers" href="#game01"><span>01</span><span>KazAXLibers</span></a></li>
+<li><a aria-label="02. Other mods" href="#game02"><span>02</span><span>Other mods</span></a></li>
+<li><a aria-label="03. Uranium" href="#game03"><span>03</span><span>Uranium</span></a></li>
+<li><a aria-label="04. Heroes of Danger" href="#game04"><span>04</span><span>Heroes of Danger</span></a></li>
+</ol>
+</div>
+<div aria-hidden="true" class="case-rail-thumb">
+<span class="case-rail-dot"></span>
+</div>
+<div aria-hidden="true" class="case-rail-fixed-label">KazAXLibers</div>
+<div aria-hidden="true" class="case-rail-fixed-count">01/04</div>
+</nav>
+<!-- 01 / KazAXLibers -->
+<section aria-labelledby="game01-title" class="case case--featured" id="game01">
+<div class="page-shell case-inner">
+<p aria-hidden="true" class="case-no">01</p>
+<div class="case-main">
+<header class="case-head">
+<div>
+<p class="case-kicker" data-copy="g1Kicker">2024—2026 / 7 Days to Die / systems + tooling</p>
+<h2 class="case-title" id="game01-title">KazAXLibers<br/><span data-copy="g1Subtitle">Weapon systems &amp; build tooling</span></h2>
+</div>
+<p class="case-lead" data-copy="g1Lead">Глобальная переработка оружия, боеприпасов, лута и прогрессии для 7 Days to Die. Главная часть кейса — собственная PHP-среда разработки, которая собирает мод из правил и данных: контент, баланс, локализацию и справочные материалы.</p>
+</header>
+<div class="game-tooling-grid">
+<section aria-label="KazAXLibers build pipeline" class="pipeline-board">
+<div class="tooling-head">
+<span>BUILD PIPELINE</span>
+<strong>data → game config</strong>
+</div>
+<div class="pipeline-track">
+<span>Items</span><i>→</i>
+<span>Recipes</span><i>→</i>
+<span>Traders</span><i>→</i>
+<span>Loot</span><i>→</i>
+<span>Modifiers</span><i>→</i>
+<span>Guns</span><i>→</i>
+<span>Ammo</span><i>→</i>
+<span>Progression</span><i>→</i>
+<span>Localization</span>
+</div>
+<div class="pipeline-output">
+<div><strong>XML</strong><span>готовый Config мода</span></div>
+<div><strong>XLSX</strong><span>таблицы баланса</span></div>
+<div><strong>HTML</strong><span>build report</span></div>
+<div><strong>IMG</strong><span>варианты иконок</span></div>
+</div>
+</section>
+<section aria-label="KazAXLibers balance model" class="balance-board">
+<div class="tooling-head">
+<span>BALANCE MODEL</span>
+<strong>не только DPS</strong>
+</div>
+<div class="formula">
+<span>POWER</span>
+<b>damage + armor pen + range + RPM + magazine + recoil + degradation</b>
+</div>
+<div class="formula">
+<span>PROFIT</span>
+<b>Power / Resource Cost</b>
+</div>
+<p data-copy="g1DiagramText">Стоимость рецепта рекурсивно раскладывается до базовых ресурсов. Затем оружие и боеприпасы можно сравнивать не только по урону, но и по цене, износу, дальности, tier-уровню и месту в прогрессии.</p>
+</section>
+</div>
+<div aria-label="KazAXLibers screenshots" class="gallery gallery--kazax">
+<figure class="shot shot--square shot--kazax-icons">
+<button aria-label="Открыть реальную иконку KazAXLibers" data-lightbox="../assets/gamedev/gamedev_kazax_icon_ammo.png" type="button">
+<span class="kazax-icon-stage">
+<span aria-hidden="true" class="kazax-icon-stage__bg"></span>
+<span aria-hidden="true" class="kazax-icon-stage__veil"></span>
+<img alt="KazAXLibers — иконка боеприпаса 7.62x54R с tier-меткой и эффектами" class="kazax-icon kazax-icon--ammo" decoding="async" height="200" loading="lazy" src="../assets/gamedev/gamedev_kazax_icon_ammo.png" width="200"/>
+<img alt="" aria-hidden="true" class="kazax-icon kazax-icon--shotgun" decoding="async" height="200" loading="lazy" src="../assets/gamedev/gamedev_kazax_icon_shotgun.png" width="200"/>
+</span>
+</button>
+<figcaption data-copy="g1CapIcon">Real item icons / 3-language content</figcaption>
+</figure>
+<figure class="shot shot--wide">
+<button aria-label="Открыть скриншот инвентаря KazAXLibers" data-lightbox="../assets/gamedev/gamedev_kazax_inventory.png" type="button">
+<img alt="KazAXLibers — инвентарь с оружием, калибрами и tier-системой" decoding="async" height="441" loading="lazy" src="../assets/gamedev/gamedev_kazax_inventory.png" width="786"/>
+</button>
+<figcaption data-copy="g1CapInv">Inventory / tiers &amp; calibers</figcaption>
+</figure>
+<figure class="shot shot--wide">
+<button aria-label="Открыть reference guide KazAXLibers" data-lightbox="../assets/gamedev/gamedev_kazax_guide.png" type="button">
+<img alt="KazAXLibers — reference guide по special ammunition effects" decoding="async" height="941" loading="lazy" src="../assets/gamedev/gamedev_kazax_guide.png" width="1672"/>
+</button>
+<figcaption data-copy="g1CapGuide">Reference guide / ammo effects</figcaption>
+</figure>
+</div>
+<div class="case-info">
+<div class="info-cell">
+<h3 data-copy="details">Реализация</h3>
+<p data-copy="g1Details">Данные вынесены в JSON/XML-шаблоны. PHP-пайплайн собирает Items, Recipes, Traders, Loot, модификаторы, оружие, патроны, progression, localization, buffs и game events; отдельно генерирует balance XLSX, build report, иконки и reference-карточки. Названия, описания и подсказки поддерживаются сразу в 3 языках.</p>
+<ul class="stack"><li>PHP</li><li>XML / XPath</li><li>JSON</li><li>3 Languages</li><li>Build Tooling</li></ul>
+<div class="case-links">
+<a href="https://www.nexusmods.com/7daystodie/mods/6250" rel="noopener noreferrer" target="_blank">Nexus Mods ↗</a>
+</div>
+</div>
+<div class="info-cell">
+<h3 data-copy="result">Результат</h3>
+<p data-copy="g1Result">Один набор данных генерирует игровой контент и аналитику для десятков калибров и вариантов боеприпасов. Система также отдельно адаптирована под IZY-All in One Gun Pack. На выходе получаются готовые игровые XML, таблицы баланса, иконки и локализованный контент для 3 языков.</p>
+</div>
+<div class="info-cell">
+<h3 data-copy="learned">Что здесь показательно</h3>
+<p data-copy="g1Learned">Здесь хорошо видно, как modding переходит в инженерную систему: контент описывается данными, баланс считается формулами, локализация обновляется вместе с билдом, а визуальные материалы собираются из тех же исходных правил. Это уже не набор ручных правок, а полноценный production pipeline.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 02 / Other mods -->
+<section aria-labelledby="game02-title" class="case" id="game02">
+<div class="page-shell case-inner">
+<p aria-hidden="true" class="case-no">02</p>
+<div class="case-main">
+<header class="case-head">
+<div>
+<p class="case-kicker" data-copy="g2Kicker">2024—2026 / focused mods / Nexus + Steam</p>
+<h2 class="case-title" id="game02-title">Other mods<br/><span data-copy="g2Subtitle">Small systems / isolated ideas</span></h2>
+</div>
+<p class="case-lead" data-copy="g2Lead">
+            Небольшие моды использую как отдельные эксперименты над конкретной механикой:
+            точность стрельбы, последствия смерти, инфекция, визуальная читаемость, совместимость
+            со сторонним оружием и баланс другого типа игры.
+          </p>
+</header>
+<div class="mod-grid">
+<article class="mod-card">
+<span class="mod-no">01</span>
+<h3>KazAXheadshots</h3>
+<p data-copy="modHeadshots">Увеличивает ценность точных выстрелов: headshot и dismemberment усилены, body damage снижен.</p>
+<small>7DTD / combat</small>
+</article>
+<article class="mod-card">
+<span class="mod-no">02</span>
+<h3>KazAX — Infected Life</h3>
+<p data-copy="modInfected">Смерть уменьшает максимальное здоровье, инфекция влияет на голод, регенерацию и позже начинает наносить урон.</p>
+<small>7DTD / survival</small>
+</article>
+<article class="mod-card">
+<span class="mod-no">03</span>
+<h3>KazAX — RU Cans</h3>
+<p data-copy="modCans">Небольшой visual-mod: русские и более читаемые иконки консервов без изменения игровой логики.</p>
+<small>7DTD / visuals</small>
+</article>
+<article class="mod-card">
+<span class="mod-no">04</span>
+<h3>KazAXLibers for IZY</h3>
+<p data-copy="modIzy">Адаптация системы калибров и прогрессии под сторонний weapon pack с отдельной настройкой баланса и возврата гильз.</p>
+<small>7DTD / compatibility</small>
+</article>
+<article class="mod-card mod-card--wide">
+<span class="mod-no">05</span>
+<h3>Game Rebalanced / Airships</h3>
+<p data-copy="modAirships">
+              Ребаланс оружия и части конструктивных модулей в Airships: Conquer the Skies:
+              damage, reload, cost, weight, durability, armor, engines и support modules.
+              Цель — уменьшить доминирующие варианты и сделать технологическую прогрессию полезнее.
+            </p>
+<small>Airships / systems balance</small>
+</article>
+</div>
+<div class="case-info">
+<div class="info-cell">
+<h3 data-copy="details">Реализация</h3>
+<p data-copy="g2Details">
+              Каждый мод меняет ограниченный набор правил и выпускается отдельно. Это позволяет проверять одну идею
+              без необходимости встраивать её в большой overhaul и проще отслеживать побочные эффекты после обновлений игры.
+            </p>
+<ul class="stack"><li>XML</li><li>7DTD Modding</li><li>Nexus Mods</li><li>Steam Workshop</li></ul>
+</div>
+<div class="info-cell">
+<h3 data-copy="result">Результат</h3>
+<p data-copy="g2Result">
+              Получился набор небольших публичных модов с разным масштабом: от одного правила combat balance
+              до адаптации глобальной системы под сторонний weapon pack и отдельного ребаланса другой игры.
+            </p>
+</div>
+<div class="info-cell">
+<h3 data-copy="learned">Что здесь показательно</h3>
+<p data-copy="g2Learned">
+              Не каждую идею нужно превращать в большую систему. Изолированный modlet удобен как проверяемая гипотеза:
+              можно отдельно оценить влияние headshot-множителя, death penalty или economy-параметров и не смешивать результат
+              с десятком других изменений.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 03 / Uranium -->
+<section aria-labelledby="game03-title" class="case case--dark" id="game03">
+<div class="page-shell case-inner">
+<p aria-hidden="true" class="case-no">03</p>
+<div class="case-main">
+<header class="case-head">
+<div>
+<p class="case-kicker" data-copy="g3Kicker">2020—2022 / Mindustry / solo mod</p>
+<h2 class="case-title" id="game03-title">Uranium<br/><span data-copy="g3Subtitle">Global Survival Mod</span></h2>
+</div>
+<p class="case-lead" data-copy="g3Lead">
+            Крупный Mindustry-мод, где я самостоятельно делал программирование, game design и новые pixel-art ассеты.
+            Основной объём — новые турели, боеприпасы, качество, уровни, производство и правила прогрессии.
+          </p>
+</header>
+<div class="gallery gallery--uranium">
+<figure class="shot shot--square">
+<button aria-label="Открыть обложку Uranium" data-lightbox="../assets/gamedev/gamedev_uranium_cover.png" type="button">
+<img alt="Uranium Global Survival Mod — обложка" decoding="async" height="945" loading="lazy" src="../assets/gamedev/gamedev_uranium_cover.png" width="1000"/>
+</button>
+<figcaption>Workshop cover</figcaption>
+</figure>
+<figure class="shot shot--wide">
+<button aria-label="Открыть систему турелей Uranium" data-lightbox="../assets/gamedev/gamedev_uranium_turrets.png" type="button">
+<img alt="Uranium: новые турели, уровни и характеристики" decoding="async" height="1080" loading="lazy" src="../assets/gamedev/gamedev_uranium_turrets.png" width="1920"/>
+</button>
+<figcaption>Turret levels / stats</figcaption>
+</figure>
+<figure class="shot shot--wide">
+<button aria-label="Открыть систему боеприпасов Uranium" data-lightbox="../assets/gamedev/gamedev_uranium_ammo.png" type="button">
+<img alt="Uranium: калибры и типы боеприпасов" decoding="async" height="1080" loading="lazy" src="../assets/gamedev/gamedev_uranium_ammo.png" width="1920"/>
+</button>
+<figcaption>Ammo system</figcaption>
+</figure>
+<figure class="shot shot--wide">
+<button aria-label="Открыть вариативность турелей Uranium" data-lightbox="../assets/gamedev/gamedev_uranium_random.png" type="button">
+<img alt="Uranium: случайные варианты турелей" decoding="async" height="1080" loading="lazy" src="../assets/gamedev/gamedev_uranium_random.png" width="1920"/>
+</button>
+<figcaption>Random quality</figcaption>
+</figure>
+</div>
+<div class="case-info">
+<div class="info-cell">
+<h3 data-copy="details">Реализация</h3>
+<p data-copy="g3Details">
+              Мод разбит на отдельные JS-модули для bullets, ammo, turret factories, multiCrafter и custom builds.
+              Турели получили level/XP, здоровье, shield, regen, armor, reload, ammo quality и luck; часть состояния
+              синхронизируется собственными network packets.
+            </p>
+<ul class="stack"><li>JavaScript</li><li>Mindustry API</li><li>Java interop</li><li>HJSON / JSON</li><li>Photoshop</li></ul>
+<div class="case-links">
+<a href="https://github.com/ax-nikita/uranium-mod" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2235972597" rel="noopener noreferrer" target="_blank">Steam Workshop ↗</a>
+</div>
+</div>
+<div class="info-cell">
+<h3 data-copy="result">Результат</h3>
+<p data-copy="g3Result">
+              Получился большой systems-expansion для Mindustry: 3 калибра, десятки типов боеприпасов, quality 1–5,
+              прокачиваемые турели, случайные характеристики и автоматические multi-crafter производства.
+              Мод опубликован в Steam Workshop на русском и английском.
+            </p>
+</div>
+<div class="info-cell">
+<h3 data-copy="learned">Что здесь показательно</h3>
+<p data-copy="g3Learned">
+              Контент создаётся через общие factory-функции и правила, поэтому новая турель — это не копия большого класса.
+              При этом игровые характеристики должны сохраняться и синхронизироваться между клиентами:
+              здесь впервые сошлись content tooling, progression и multiplayer state.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 04 / Heroes of Danger -->
+<section aria-labelledby="game04-title" class="case" id="game04">
+<div class="page-shell case-inner">
+<p aria-hidden="true" class="case-no">04</p>
+<div class="case-main">
+<header class="case-head">
+<div>
+<p class="case-kicker" data-copy="g4Kicker">2018 / первая собственная игра / solo</p>
+<h2 class="case-title" id="game04-title">Heroes of Danger<br/><span data-copy="g4Subtitle">Console roguelike</span></h2>
+</div>
+<p class="case-lead" data-copy="g4Lead">
+            Первая законченная игра: текстовый roguelike на C++ без движка и плагинов.
+            Процедурные комнаты, события, бои, три персонажа, инвентарь, NPC и сохранение собраны в одном полном игровом цикле.
+          </p>
+</header>
+<div class="gallery gallery--hod">
+<figure class="shot shot--wide">
+<button aria-label="Открыть главное меню Heroes of Danger" data-lightbox="../assets/gamedev/gamedev_hod_menu.png" type="button">
+<img alt="Heroes of Danger — главное меню версии 1.5" decoding="async" height="306" loading="lazy" src="../assets/gamedev/gamedev_hod_menu.png" width="646"/>
+</button>
+<figcaption>Main menu / v1.5</figcaption>
+</figure>
+<figure class="shot shot--wide">
+<button aria-label="Открыть инвентарь Heroes of Danger" data-lightbox="../assets/gamedev/gamedev_hod_inventory.png" type="button">
+<img alt="Heroes of Danger — инвентарь и характеристики" decoding="async" height="330" loading="lazy" src="../assets/gamedev/gamedev_hod_inventory.png" width="647"/>
+</button>
+<figcaption>Inventory / stats</figcaption>
+</figure>
+<figure class="shot shot--wide">
+<button aria-label="Открыть событие NPC Heroes of Danger" data-lightbox="../assets/gamedev/gamedev_hod_npc.png" type="button">
+<img alt="Heroes of Danger — NPC-событие и варианты выбора" decoding="async" height="324" loading="lazy" src="../assets/gamedev/gamedev_hod_npc.png" width="646"/>
+</button>
+<figcaption>NPC / choices</figcaption>
+</figure>
+<figure class="shot shot--wide">
+<button aria-label="Открыть бой Heroes of Danger" data-lightbox="../assets/gamedev/gamedev_hod_battle.png" type="button">
+<img alt="Heroes of Danger — пошаговый бой" decoding="async" height="331" loading="lazy" src="../assets/gamedev/gamedev_hod_battle.png" width="647"/>
+</button>
+<figcaption>Combat</figcaption>
+</figure>
+</div>
+<div class="case-info">
+<div class="info-cell">
+<h3 data-copy="details">Реализация</h3>
+<p data-copy="g4Details">
+              Комнаты и текстовые события выбираются процедурно. Есть пошаговые бои, характеристики, предметы,
+              валюта, награды, NPC и save. У трёх персонажей разные правила: Soldier восстанавливается между ходами,
+              Hunter получает дополнительные варианты торговли, Assassin — больше денег и отдельный humorous CIS mode.
+            </p>
+<ul class="stack"><li>C++</li><li>Console</li><li>Text UI</li></ul>
+</div>
+<div class="info-cell">
+<h3 data-copy="result">Результат</h3>
+<p data-copy="g4Result">
+              Игра доведена до рабочего цикла: старт → комнаты и события → combat/loot → развитие персонажа → следующие этажи,
+              с сохранением состояния. Графики не было — весь интерфейс работал в терминале.
+            </p>
+</div>
+<div class="info-cell">
+<h3 data-copy="learned">Что здесь показательно</h3>
+<p data-copy="g4Learned">
+              Даже без ООП проект уже требовал повторно использовать правила и генерировать контент из списков.
+              Большие switch/case работали на небольшом объёме, но плохо масштабировались — тот же вопрос масштабирования
+              позже я решал в Uranium через factories, а в KazAXLibers через data-driven pipeline.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="site-footer" id="contact">
+<div class="footer-inner">
+<div class="footer-grid">
+<div>
+<p class="footer-eyebrow" data-copy="footerEyebrow">GameDev / systems / tooling</p>
+<h2 data-copy="footerTitle">Нужен systems-разработчик?<span>Обсудим задачу.</span></h2>
+</div>
+<div class="footer-contact">
+<p data-copy="footerText">Интересны задачи на game systems, balance, modding и инструменты для работы с большим объёмом контента.</p>
+<div class="contact-links">
+<a href="https://kwork.ru/user/axnikita" rel="noopener noreferrer" target="_blank">Kwork ↗</a>
+<a href="https://github.com/ax-nikita" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Zonov Nikita / axnikita</span>
+<span>GAMEDEV PORTFOLIO / V1.1</span>
+</div>
+</div>
+</footer>
+</div>
+<dialog aria-label="Просмотр изображения" class="lightbox" id="lightbox">
+<div class="lightbox-inner">
+<button aria-label="Закрыть" class="lightbox-close" type="button">×</button>
+<img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="/>
+</div>
+</dialog>
+
+<script src="../assets/js/axnikitaJS.js" defer></script>
+<script src="../assets/js/site-runtime.js" defer></script>
+<script src="../assets/js/gamedev.js" defer></script>
+</body>
+</html>
