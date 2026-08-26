@@ -1,0 +1,3 @@
+/* Port the approved .hero rules from reference pages into this partial.
+Keep selectors shallow (<= 3 nesting levels) and use tokens/mixins instead of magic duplicates.
+Use Sass modules only; main.scss composes partials via @use. */

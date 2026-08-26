@@ -1,0 +1,18 @@
+{
+  "name": "axnikita-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev --host 127.0.0.1",
+    "build": "astro build",
+    "preview": "astro preview --host 127.0.0.1",
+    "test": "node --check public/assets/js/axnikitaJS.js && node --test tests/axnikitaJS.smoke.test.cjs && node --test tests/handoff-structure.test.cjs && node --test tests/portfolio-pages.test.cjs"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "astro": "^5.0.0",
+    "sass": "^1.80.0",
+    "typescript": "^5.6.0"
+  }
+}

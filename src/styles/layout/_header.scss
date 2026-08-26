@@ -1,0 +1,131 @@
+@use "../abstracts/mixins" as m;
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg) 94%, transparent);
+  backdrop-filter: blur(12px);
+}
+
+.header-inner {
+  @include m.container;
+
+  min-height: 70px;
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) auto minmax(180px, 1fr);
+  align-items: center;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+.brand-mark {
+  width: 10px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.site-role {
+  justify-self: center;
+  margin: 0;
+  color: var(--muted);
+  font-size: .67rem;
+  font-weight: 650;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.header-actions,
+.site-nav ul,
+.language-switcher {
+  display: flex;
+  align-items: center;
+}
+
+.header-actions {
+  justify-self: end;
+  gap: 18px;
+}
+
+.site-nav ul,
+.language-switcher {
+  gap: 18px;
+  margin: 0;
+  list-style: none;
+}
+
+.site-nav a {
+  font-size: .68rem;
+  font-weight: 780;
+  letter-spacing: .095em;
+  text-transform: uppercase;
+
+  &[aria-current="page"],
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.language-switcher {
+  gap: 7px;
+  padding-left: 15px;
+  border-left: 1px solid var(--line);
+}
+
+.lang-button {
+  padding: 3px 0;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+
+  &[aria-pressed="true"] {
+    border-color: currentColor;
+    color: var(--dark);
+  }
+}
+
+@include m.mobile {
+  .site-header {
+    position: relative;
+  }
+
+  .header-inner {
+    grid-template-columns: 1fr auto;
+    min-height: 62px;
+  }
+
+  .site-role {
+    display: none;
+  }
+}
+
+@include m.small {
+  .header-inner {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-block: 10px;
+  }
+
+  .header-actions {
+    justify-self: stretch;
+    justify-content: space-between;
+  }
+}

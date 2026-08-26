@@ -1,0 +1,86 @@
+---
+import SiteHeader from "../components/SiteHeader.astro";
+import SiteFooter from "../components/SiteFooter.astro";
+import "../styles/main.scss";
+
+import { footerCopy, type PageKey } from "../data/site";
+
+interface Props {
+  title: string;
+  description: string;
+  page: PageKey;
+}
+
+const { title, description, page } = Astro.props;
+const footer = footerCopy[page];
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="ru" data-lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&family=Unbounded:wght@400;500;600;700&display=swap"
+    />
+
+    <!-- Keep the library classic/deferred. It exposes the historical globals and v3 namespace. -->
+    <script is:inline src={`${base}assets/js/axnikitaJS.js`} defer></script>
+    <script is:inline src={`${base}assets/js/portfolio-runtime.js`} defer></script>
+  </head>
+
+  <body data-page={page}>
+    <a
+      class="skip-link"
+      href="#main"
+      data-lang-ru="К содержимому"
+      data-lang-en="Skip to content"
+    >
+      К содержимому
+    </a>
+
+    <div class="site-shell">
+      <SiteHeader activePage={page} />
+
+      <!-- Native axnikitaJS [spa] replaces ONLY main. Header/footer markup remains single-source. -->
+      <main
+        id="main"
+        data-page-key={page}
+        data-page-title={title}
+        data-page-description={description}
+        data-footer-eyebrow-ru={footer.eyebrow.ru}
+        data-footer-eyebrow-en={footer.eyebrow.en}
+        data-footer-title-ru={footer.title.ru}
+        data-footer-title-en={footer.title.en}
+        data-footer-accent-ru={footer.accent.ru}
+        data-footer-accent-en={footer.accent.en}
+        data-footer-text-ru={footer.text.ru}
+        data-footer-text-en={footer.text.en}
+      >
+        <slot />
+      </main>
+
+      <SiteFooter page={page} />
+    </div>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Просмотр изображения">
+      <div class="lightbox-inner">
+        <button
+          class="lightbox-close"
+          type="button"
+          aria-label="Закрыть"
+          data-lightbox-close
+        >
+          ×
+        </button>
+        <img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==" />
+      </div>
+    </dialog>
+  </body>
+</html>

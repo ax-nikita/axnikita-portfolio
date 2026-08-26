@@ -1,7 +1,11 @@
 baza/
 tools/
+node_modules/
+dist/
+/assets/
+/web/
+/gamedev/
+/index.html
 server-4173*.log
-.gitattributes
-.gitignore
 .DS_Store
 Thumbs.db

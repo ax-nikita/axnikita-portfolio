@@ -1,0 +1,197 @@
+@use "../abstracts/mixins" as m;
+
+.case-index {
+  position: sticky;
+  top: 70px;
+  z-index: 20;
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, var(--bg) 95%, transparent);
+  backdrop-filter: blur(10px);
+}
+
+.case-index-list {
+  display: grid;
+  margin: 0;
+  list-style: none;
+
+  a {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 14px;
+    border-left: 1px solid var(--line);
+    color: #514c45;
+    font-size: .57rem;
+    font-weight: 780;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+
+    &.is-active,
+    &:hover {
+      background: var(--dark);
+      color: #fff;
+    }
+  }
+}
+
+/* Mobile minimap: keep this geometry aligned with the approved prototype. */
+.case-rail-thumb,
+.case-rail-fixed-label,
+.case-rail-fixed-count {
+  display: none;
+}
+
+@include m.mobile {
+  .case-index {
+    --case-progress: 0;
+    --rail-axis-x: 13.5px;
+    --rail-caption-gap: 18px;
+
+    position: fixed;
+    top: 50%;
+    left: 6px;
+    z-index: var(--z-rail);
+    width: 34px;
+    height: min(56vh, 400px);
+    transform: translateY(-50%);
+    border: 0;
+    background: transparent;
+    backdrop-filter: none;
+    overflow: visible;
+    pointer-events: none;
+  }
+
+  .case-index-list {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-block: 8px;
+    overflow: visible;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      border-radius: 999px;
+      pointer-events: none;
+    }
+
+    &::before {
+      left: 13px;
+      width: 1px;
+      height: calc(100% - 16px);
+      background: rgba(255,255,255,.56);
+      mix-blend-mode: difference;
+    }
+
+    &::after {
+      left: 12px;
+      width: 3px;
+      height: calc((100% - 16px) * var(--case-progress));
+      background: #5d73ff;
+      box-shadow: 0 0 9px rgba(69,94,255,.24);
+    }
+
+    a {
+      position: relative;
+      width: 30px;
+      min-height: 22px;
+      display: block;
+      padding: 0;
+      border: 0;
+      background: transparent !important;
+      color: transparent;
+      pointer-events: auto;
+
+      span {
+        display: none;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        width: 7px;
+        height: 7px;
+        transform: translateY(-50%);
+        border: 1px solid rgba(255,255,255,.72);
+        border-radius: 50%;
+        background: rgba(18,18,17,.74);
+        box-shadow: 0 1px 5px rgba(0,0,0,.32);
+      }
+    }
+  }
+
+  .case-rail-thumb {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: calc(8px + (100% - 16px) * var(--case-progress));
+    display: block;
+    width: 100%;
+    height: 0;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .case-rail-dot {
+    position: absolute;
+    left: 7px;
+    top: 0;
+    width: 13px;
+    height: 13px;
+    transform: translateY(-50%);
+    border: 2px solid #fff;
+    border-radius: 50%;
+    background: #5872ff;
+    box-shadow: 0 0 0 3px rgba(12,12,11,.72), 0 3px 12px rgba(0,0,0,.34);
+  }
+
+  .case-rail-fixed-label,
+  .case-rail-fixed-count {
+    position: absolute;
+    z-index: 7;
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+    color: var(--dark);
+    font-family: var(--font-display);
+    font-size: .56rem;
+    font-weight: 650;
+    line-height: 1;
+    letter-spacing: .075em;
+    text-transform: uppercase;
+    text-shadow: none;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .case-rail-fixed-label {
+    left: calc(var(--rail-axis-x) - .35em);
+    bottom: calc(100% + var(--rail-caption-gap));
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: translateX(-15%) rotate(180deg);
+  }
+
+  .case-rail-fixed-count {
+    left: calc(var(--rail-axis-x) + .45em);
+    top: calc(100% + var(--rail-caption-gap) + 8px);
+    transform: translateX(-60%) rotate(-90deg);
+  }
+}
+
+@include m.small {
+  .case-index {
+    --rail-axis-x: 12.5px;
+    --rail-caption-gap: 17px;
+  }
+}
