@@ -1,194 +1,185 @@
 # axnikita / Zonov Nikita
 
-**Full-stack WEB developer · PHP / JavaScript / WordPress · Game systems & tooling**
+**Full-stack WEB developer · PHP / JavaScript / WordPress · GameDev / tooling**
 
-This repository is my portfolio and, at the same time, one of the projects in it.
+This repository contains the published version of my portfolio.
 
-It collects work from commercial WEB development, production/legacy systems, my own browser libraries and GameDev tooling. The point is not to present a list of technologies — it is to show how I approach real systems: what I built, why the architecture looks the way it does, and how the same ideas evolved from early projects into reusable infrastructure.
+The site is intentionally simple at the deployment level: it is a static GitHub Pages project with three independently accessible pages and no required backend or framework runtime.
 
 <p align="center">
-  <img src="docs/readme/mprus-feed.png" alt="MPRUS marketplace sellers platform" width="49%">
-  <img src="docs/readme/kazaxlibers-inventory.png" alt="KazAXLibers 7 Days to Die systems mod" width="49%">
+  <img src="assets/about/mprus-preview.webp" alt="MPRUS — marketplace sellers platform" width="49%">
+  <img src="assets/gamedev/gamedev_kazax_inventory.png" alt="KazAXLibers — 7 Days to Die systems mod" width="49%">
 </p>
 
-## What I work with
+## Portfolio
 
-My main WEB stack is **PHP, JavaScript, WordPress and MySQL**. Most of my commercial work is not greenfield landing pages: it includes existing production code, integrations, custom WordPress architecture, dynamic loading, real-time features, internal tools and long-lived projects that have to keep working while they evolve.
+The portfolio is split into three sections:
 
-GameDev is the second part of the portfolio. I use it mostly for **systems design, balance and tooling**: procedural logic, progression, multiplayer state, modding APIs, data-driven content and utilities that help manage large amounts of game data.
+- **About** — background, stack and project timeline;
+- **WEB** — commercial and personal WEB projects from 2019–2026;
+- **GameDev** — games, mods, balance systems and development tooling.
 
-## Selected engineering work
+The content is based on real projects and source archives rather than demo applications created specifically for the portfolio.
 
-| Project | What it demonstrates | Main technology |
-| --- | --- | --- |
-| **MPRUS** | Generalized content loading for Post/User/Term/Comment, custom API dispatcher, reactions, ratings, notifications, rate limiting and WordPress-side service separation | PHP, WordPress, JavaScript, MySQL, WP Object Cache |
-| **MamaMind / Momspace** | Server-rendered WordPress with SPA-like navigation, reusable dynamic loader, infinite article reading with URL synchronization, CPT/search/SEO integrations | PHP, WordPress, Vanilla JS, SCSS |
-| **AxNikita.com / axnikitaJS** | Custom full-stack site that grew into reusable PHP/JS tooling: WebSocket, client-side loading, History API navigation, cache and reusable browser utilities | PHP, JavaScript, MySQL, WebSocket |
-| **Production legacy / commerce** | Long-term development inside a large PHP 7.4 codebase: internal call-center tools, delivery/payment integrations and safe changes across existing business flows | PHP 7.4, external APIs |
-| **KazAXLibers** | Data-driven build pipeline for a 7 Days to Die overhaul: XML generation, recursive resource-cost calculation, balance analytics, icon generation and 3-language content | PHP, XML/XPath, JSON, ImageMagick, PHPExcel |
-| **Uranium** | Large Mindustry systems expansion with factories, ammunition, turret progression, random quality, multi-crafters and synchronized gameplay state | JavaScript, Mindustry API, HJSON/JSON |
+## Main stack
 
-The portfolio also contains smaller commercial WordPress projects, focused GameDev mods and my first projects from 2018–2019. I keep them because the progression is useful: the older work explains where the current abstractions came from.
+My primary commercial stack is:
 
-## This portfolio is an engineering project too
+`PHP` · `JavaScript` · `WordPress` · `MySQL`
 
-The site itself is intentionally built around the same principles I use in application code:
+Depending on the project, this also includes REST APIs, SPA-like navigation, WebSocket, caching, Redis/KeyDB, Gearman, cron, Apache/Nginx, payment and delivery integrations.
 
-- one shared header and one shared footer instead of duplicated page markup;
-- semantic HTML with normal URLs and progressive enhancement;
-- **axnikitaJS 3.0.1** as the browser runtime;
-- native `[spa]` navigation from axnikitaJS with GET semantics for page loading;
-- server-rendered pages remain independently accessible without JavaScript;
-- modular SCSS with Sass `@use`, shared tokens and component ownership;
-- separate desktop and mobile compositions instead of shrinking desktop until it fits;
-- visual QA at desktop, tablet, 390 px and 320 px widths;
-- real project screenshots and technical diagrams instead of invented UI or fake metrics.
+GameDev runs in parallel: C++, C#, Unity, JavaScript modding, XML/JSON configuration and PHP tools for generating and balancing content.
 
-### Why axnikitaJS
+## Selected work
 
-`axnikitaJS` is my own browser library that originated in earlier personal/commercial work and is still used by several of my projects.
+### MPRUS — 2025–2026
 
-The current **3.0.1** release keeps the historical `ax*` API for backward compatibility while moving new code toward explicit, versioned dependencies.
+A WordPress-based information/social platform for marketplace sellers.
 
-```js
-const { axRequest, axURL, axCookie } = axnikitaJS.classes;
-const { throttle } = axnikitaJS.utils;
-```
+The project includes a custom API dispatcher, nonce checks, weighted rate limiting, reactions, bookmarks, subscriptions, notifications and a generalized `InfiniteLoader` architecture for Post/User/Term/Comment.
 
-For this portfolio the library is responsible for the browser-side infrastructure:
+**Stack:** PHP · WordPress · JavaScript · MySQL · WP Object Cache
+
+### MamaMind / Momspace — 2025
+
+A custom WordPress theme developed from scratch for a large parenting and pregnancy portal.
+
+The project uses server-rendered pages with SPA-like navigation, `axLoader` / `domLoader`, dynamic pagination, infinite article loading, custom search, CPTs, reactions, comments and SEO integrations.
+
+**Stack:** PHP · WordPress · Vanilla JS · SCSS/CSS
+
+### Production legacy / commerce — 2022–2024
+
+Long-term work inside a large PHP 7.4 production system.
+
+The scope included call-center tools, calculators, tables, payment pages, delivery/payment API integrations and changes inside an existing legacy codebase where new functionality had to coexist with established business flows.
+
+**Stack:** PHP 7.4 · external APIs · payments · delivery integrations
+
+### AxNikita.com and own libraries — 2021–2022
+
+A custom full-stack personal site without a CMS/framework: personal accounts, reviews, achievements, WebSocket chat and client-side dynamic loading.
+
+Part of that code later grew into reusable PHP and JavaScript libraries, including the early versions of `axnikitaJS`.
+
+**Stack:** PHP · JavaScript · MySQL · WebSocket · HTML · SCSS/CSS
+
+### KazAXLibers — 2024–2026
+
+A large 7 Days to Die weapon/ammunition overhaul with a separate PHP development environment.
+
+The build tools generate XML configuration, balance spreadsheets, reports and icon variants. Weapon/ammunition balance is evaluated through calculated Power/Profit values, recipe cost is recursively reduced to base resources, and game content is maintained in three languages.
+
+**Stack:** PHP · XML/XPath · JSON · ImageMagick · PHPExcel
+
+### Uranium — 2020–2022
+
+A large Mindustry mod with new ammunition, turrets, progression, random quality, factories and multiplayer state synchronization.
+
+Instead of copying large blocks of content, the mod uses common creator/factory functions for bullets, turrets and buildings.
+
+**Stack:** JavaScript · Mindustry API · Java interop · HJSON/JSON
+
+## Current repository implementation
+
+The currently published branch is a static site.
 
 ```text
-internal link [spa]
-        ↓
-axLoader
-        ↓
-axRequest(type: auto)
-        ↓
-empty page payload → GET
-        ↓
-replace <main>
-        ↓
-end_load_spa
-        ↓
-page-specific lifecycle is reinitialized
+.
+├── index.html
+├── web/
+│   └── index.html
+├── gamedev/
+│   └── index.html
+└── assets/
+    ├── about/
+    ├── web/
+    ├── gamedev/
+    ├── css/
+    │   ├── about.css
+    │   ├── web.css
+    │   └── gamedev.css
+    └── js/
+        ├── about.js
+        ├── web.js
+        ├── gamedev.js
+        ├── site-runtime.js
+        └── axnikitaJS.js
 ```
 
-Batch loading remains explicitly POST, while normal page navigation keeps the historical GET semantics.
+There is no mandatory build step in the published version: each route can be opened directly and GitHub Pages serves the files as-is.
 
-The library source, migration notes and regression tests are included in the repository rather than treated as a black-box dependency.
+The page-specific JavaScript implements the portfolio interactions, including:
 
-## Repository architecture
+- RU / EN switching;
+- the horizontal experience timeline;
+- project gallery lightboxes;
+- desktop case navigation;
+- the mobile vertical case-progress/minimap;
+- responsive behavior and small runtime helpers.
+
+## axnikitaJS in the published branch
+
+The repository currently contains the **2.31** version of my `axnikitaJS` library — the version originally used by the prototypes from this generation of the site.
+
+`axnikitaJS` started as reusable browser infrastructure extracted from my earlier projects: DOM helpers, requests/loaders, dynamic content loading and SPA-related behavior.
+
+A separate modernization of the library to **3.x** is in progress. The public README deliberately distinguishes that work from what is already present in this branch.
+
+## Why the repository is static
+
+For the portfolio itself I prefer normal HTML routes first:
 
 ```text
-src/
-├── layouts/
-│   └── BaseLayout.astro
-├── components/
-│   ├── SiteHeader.astro
-│   └── SiteFooter.astro
-├── data/
-│   └── site.ts
-├── pages/
-│   ├── index.astro
-│   ├── web.astro
-│   └── gamedev.astro
-├── scripts/
-│   └── portfolio-runtime.js
-└── styles/
-    ├── abstracts/
-    ├── base/
-    ├── layout/
-    ├── components/
-    ├── pages/
-    └── main.scss
-
-public/assets/js/
-├── axnikitaJS.js
-└── portfolio-runtime.js
+/
+├── web/
+└── gamedev/
 ```
 
-`BaseLayout` owns the document shell. `SiteHeader` and `SiteFooter` are the only sources of their markup. Page files own only their page content. Shared visual behavior belongs to shared SCSS partials, not copied page styles.
+That gives the project a simple deployment model and keeps every page directly accessible without requiring a backend.
 
-## SCSS conventions
+The application architecture can evolve independently of the hosting model.
 
-The production styles use Sass modules rather than a single generated stylesheet:
+## Current refactor
 
-```scss
-@use "abstracts/tokens";
-@use "base/reset";
-@use "layout/header";
-@use "layout/footer";
-@use "components/case-index";
-@use "pages/gamedev";
-```
+The next iteration is being prepared separately and is **not claimed as already implemented in the published branch**.
 
-A few rules I keep explicit:
+Its goals are:
 
-- no deprecated Sass `@import`;
-- shallow nesting;
-- reusable colors, spacing, breakpoints and z-indexes are tokens;
-- component styles have a clear owner;
-- page partials contain only page-specific composition;
-- grid/flex children are written defensively for long real content;
-- `prefers-reduced-motion` is respected for decorative motion.
+- migration to `axnikitaJS 3.0.1`;
+- native `[spa]` navigation through the library;
+- a single source of markup for the header and footer;
+- modern modular SCSS instead of duplicated compiled page styles;
+- keeping normal static URLs and GitHub Pages deployment;
+- preserving the approved desktop/mobile layouts.
 
-## Development and AI-assisted workflow
+The important part is that the refactor should reduce duplication without changing the portfolio into a framework demo.
 
-I use Codex and other AI tools as implementation and review accelerators, not as a substitute for project context.
+## Repository principles
 
-The architecture, project facts, visual direction, custom libraries, source archives and acceptance criteria come from my own work. AI-assisted changes are made against those constraints and then reviewed with code checks, regression tests and browser QA.
+For this project I keep a few constraints explicit:
 
-That is also why this repository keeps explicit architecture notes and real reference material: a generated change should be easy to verify against the intended system, not accepted because it merely “looks finished”.
+- real project screenshots instead of invented interfaces;
+- no fabricated metrics;
+- normal URLs must remain usable;
+- mobile is treated as a separate composition, not only a reduced desktop layout;
+- screenshots are not cropped when cropping removes meaningful UI;
+- changes are checked at desktop, tablet and narrow mobile widths.
 
-## Verification
-
-The repository includes regression tests for axnikitaJS and structural checks for the portfolio.
-
-For the library:
-
-```bash
-node --check public/assets/js/axnikitaJS.js
-node --test tests/axnikitaJS.smoke.test.cjs
-```
-
-The portfolio QA baseline includes:
-
-- 1440 px desktop;
-- 1024 px small desktop/tablet;
-- 390×844 mobile;
-- 320×568 small mobile;
-- no horizontal overflow;
-- no gallery overlap;
-- no missing assets;
-- normal direct URLs;
-- SPA navigation and browser history;
-- RU/EN switch;
-- lightbox;
-- mobile case minimap;
-- reduced-motion behavior.
-
-## Portfolio sections
-
-- **About** — experience, stack and project timeline
-- **WEB** — commercial and personal WEB projects
-- **GameDev** — systems, modding, balance and tooling
-
-## Contact
+## Links
 
 - GitHub: [ax-nikita](https://github.com/ax-nikita)
 - Kwork: [axnikita](https://kwork.ru/user/axnikita)
+- Uranium source: [ax-nikita/uranium-mod](https://github.com/ax-nikita/uranium-mod)
 
 ---
 
 <details>
-<summary><strong>Кратко по-русски</strong></summary>
+<summary><strong>English / Russian note</strong></summary>
 
-Я full-stack WEB-разработчик. Основной стек — PHP, JavaScript, WordPress и MySQL. Работаю не только с новыми сайтами, но и с production/legacy-кодом, API, платежами, доставкой, собственными компонентами и архитектурой WordPress-проектов.
+Основная часть README оставлена на английском, потому что репозиторий публичный и используется как часть портфолио.
 
-Отдельное направление — GameDev: системы, баланс, моддинг и инструменты для генерации/анализа большого объёма игрового контента.
-
-Это портфолио само является техническим кейсом: единая разметка header/footer, Astro, современный SCSS, собственная библиотека axnikitaJS 3.0.1, SPA с обычными URL и обязательная проверка адаптива в Chromium.
-
-AI-инструменты используются в разработке как ускоритель реализации и проверки. Архитектура, содержание кейсов, исходные проекты, собственные библиотеки и критерии качества не генерируются заново под README — они берутся из реальной кодовой базы и проектных архивов.
+Сам сайт поддерживает RU/EN и содержит более подробное описание проектов, роли, реализации и технических решений.
 
 </details>

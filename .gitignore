@@ -1,5 +1,7 @@
 baza/
 tools/
 server-4173*.log
+.gitattributes
+.gitignore
 .DS_Store
 Thumbs.db
