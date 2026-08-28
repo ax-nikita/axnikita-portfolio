@@ -1,408 +1,257 @@
-<!DOCTYPE html>
-
-<html data-lang="ru" lang="ru">
+<!doctype html>
+<html lang="ru" data-lang="ru">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <meta content="Портфолио full-stack разработчика: WEB, GameDev и технические системы." name="description"/>
-    <title>Nikita — Portfolio</title>
-    <!--
-        Onest + Prata — бесплатные open-source шрифты из Google Fonts.
-        В прототипе подключены через CDN, чтобы HTML оставался одним файлом.
-      -->
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&amp;family=Unbounded:wght@400;500;600;700&amp;display=swap"
-          rel="stylesheet"/>
-
-    <link rel="stylesheet" href="assets/css/about.css"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="description" content="Portfolio of Zonov Nikita: full-stack WEB development, WordPress, PHP, JavaScript, REST API, SPA, GameDev and modding projects."/>
+  <title>Zonov Nikita / axnikita - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&family=Unbounded:wght@400;500;600;700&display=swap"/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <script src="assets/js/axnikitaJS.js" defer></script>
+  <script type="module" src="assets/js/site-runtime.js"></script>
 </head>
-<body>
-<a class="skip-link" data-copy="skip" href="#content">Перейти к содержимому</a>
-<div class="site-shell">
-    <header class="site-header">
-        <div class="header-inner">
-            <a aria-label="Nikita — главная" class="brand" href="./">
-                <span aria-hidden="true" class="brand-mark"></span>
-                <span>Nikita / Portfolio</span>
-            </a>
-            <p class="role" data-copy="identity">Full-stack developer · product &amp; systems</p>
-            <div class="header-actions">
-                <nav aria-label="Основная навигация" class="site-nav">
-                    <ul>
-                        <li><a aria-current="page" data-copy="about" href="#about">Обо мне</a></li>
-                        <li><a href="web/">WEB</a></li>
-                        <li><a href="gamedev/">GameDev</a></li>
-                    </ul>
-                </nav>
-                <div aria-label="Выбор языка" class="language-switcher" role="group">
-                    <button aria-pressed="true" class="lang-button" data-lang-button="ru" type="button">RU</button>
-                    <button aria-pressed="false" class="lang-button" data-lang-button="en" type="button">EN</button>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main id="content">
-        <section aria-labelledby="about-title" class="about-section" id="about">
-            <div class="section-shell">
-                <header class="section-heading section-heading--about-primary">
-                    <p aria-hidden="true" class="section-index">01</p>
-                    <div class="section-heading-copy"><p class="section-kicker" data-copy="aboutKicker">axnikita / Zonov
-                        Nikita</p>
-                        <h1 data-copy="aboutTitle" id="about-title">Full-stack WEB developer.<br/><span>PHP / JavaScript / WordPress.</span>
-                        </h1></div>
-                    <p class="section-intro" data-copy="aboutIntro">Коммерческая разработка с 2020: самописные сайты,
-                        WordPress, REST API, SPA, legacy и внутренние инструменты. GameDev и modding — отдельное
-                        направление.</p>
-                </header>
-                <div class="about-composer about-composer--portrait">
-                    <div aria-hidden="true" class="about-portrait-bg">
-                        <img alt="" src="assets/about/portrait.png"/>
-                    </div>
-                    <div class="about-panel">
-                        <ul aria-label="Профиль" class="identity-stack">
-                            <li>axnikita</li>
-                            <li>Zonov Nikita</li>
-                            <li>Full-stack WEB</li>
-                            <li>Commercial since 2020</li>
-                        </ul>
-                        <div class="identity-head"><p class="identity-eyebrow" data-copy="identityEyebrow">WEB /
-                            production / GameDev</p>
-                            <p class="identity-role" data-copy="identityRole">Разрабатываю и дорабатываю коммерческие
-                                WEB-проекты: PHP, JavaScript, WordPress, API и frontend.</p></div>
-                        <div class="identity-copy">
-                            <p data-copy="identityText1"><strong>Momspace:</strong> тема с нуля, SPA/domLoader и запуск
-                                в production. <strong>MPRUS:</strong> собственный API, nonce, weighted rate limiter и
-                                InfiniteLoader для Post/User/Term/Comment.</p>
-                            <p data-copy="identityText2">В production/legacy работал с внутренними инструментами call
-                                center, платежными страницами, API доставки и оплаты. В «Сибирском Доме» исправлял
-                                адаптив, JavaScript и добавлял новые блоки в чужую WordPress-тему.</p>
-                            <p data-copy="identityText3">GameDev веду параллельно: <strong>Uranium</strong> для
-                                Mindustry, <strong>KazAXLibers</strong> для 7 Days to Die, C++/C#/Unity и собственные
-                                инструменты для генерации и балансировки контента.</p>
-                        </div>
-                        <div aria-label="Профили и контакты" class="profile-links"><a
-                                href="https://kwork.ru/user/axnikita" rel="noopener noreferrer" target="_blank">Kwork
-                            ↗</a><a href="https://github.com/ax-nikita" rel="noopener noreferrer" target="_blank">GitHub
-                            ↗</a><a data-copy="contactShort" href="#contact">Обсудить задачу ↓</a></div>
-                        <div aria-label="Коротко" class="facts-grid">
-                            <div class="fact-item"><strong data-copy="fact1t">Основной стек</strong><span>PHP · JavaScript · WordPress · MySQL</span>
-                            </div>
-                            <div class="fact-item"><strong data-copy="fact2t">WEB</strong><span>REST API · SPA · legacy · integrations</span>
-                            </div>
-                            <div class="fact-item"><strong data-copy="fact3t">GameDev</strong><span>C++ · C# · Unity · JS modding · tooling</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div aria-label="Ключевые технические направления" class="about-techgrid">
-                    <article class="tech-card"><strong>WEB / Core</strong>
-                        <p>PHP · JavaScript · WordPress · MySQL · HTML · SCSS</p><span class="tech-example">Momspace / MPRUS / Aurora Trans</span>
-                    </article>
-                    <article class="tech-card"><strong>App layer</strong>
-                        <p>REST API · SPA · axLoader · domLoader · InfiniteLoader · Cache</p><span class="tech-example">API / dynamic UI / loaders</span>
-                    </article>
-                    <article class="tech-card"><strong>Production</strong>
-                        <p>Redis · KeyDB · Gearman · Cron · Apache · Nginx · Payments</p><span class="tech-example">legacy / delivery / integrations</span>
-                    </article>
-                    <article class="tech-card"><strong>GameDev</strong>
-                        <p>C++ · C# · Unity · JS modding · XML · JSON · PHP tooling</p><span class="tech-example">Uranium / KazAXLibers</span>
-                    </article>
-                </div>
-            </div>
-        </section>
-        <section aria-labelledby="timeline-title" class="timeline-section" id="timeline">
-            <div class="section-shell">
-                <header class="section-heading section-heading--timeline">
-                    <p aria-hidden="true" class="section-index">02</p>
-                    <div class="section-heading-copy">
-                        <p class="section-kicker" data-copy="timelineKicker">Опыт / проекты</p>
-                        <h2 data-copy="timelineTitle" id="timeline-title">2018 → 2026.<br/><span>WEB + GameDev.</span>
-                        </h2>
-                    </div>
-                    <p class="section-intro" data-copy="timelineIntro">Коммерческая разработка с 2020. До этого — первые
-                        собственные проекты; GameDev и modding идут параллельно.</p>
-                </header>
-                <div class="timeline-scroll-wrap">
-                    <div aria-hidden="true" class="timeline-edge-cue">
-                        <span class="timeline-edge-label">drag / scroll</span>
-                        <svg aria-hidden="true" class="timeline-edge-arrow" focusable="false" viewbox="0 0 56 18">
-                            <path class="timeline-edge-arrow-line" d="M1 9H49"></path>
-                            <path class="timeline-edge-arrow-head" d="M43 3L49 9L43 15"></path>
-                        </svg>
-                    </div>
-                    <div class="timeline-scroll">
-                        <div class="timeline-shell">
-                            <ol aria-label="Хронология проектов" class="timeline">
-                                <li class="timeline-item">
-                                    <article class="timeline-entry">
-                                        <div class="timeline-year">
-                                            <time datetime="2018">2018</time>
-                                            <span>GameDev</span>
-                                        </div>
-                                        <div class="timeline-main">
-                                            <h3>Heroes of Danger</h3>
-                                            <p data-copy="tl2018Text">C++ roguelike: процедурные комнаты, бои,
-                                                инвентарь, NPC и сохранения. Первый законченный игровой проект; логика
-                                                была построена на функциях и крупных switch/case.</p>
-                                        </div>
-                                        <ul aria-label="Heroes of Danger: stack" class="timeline-tags">
-                                            <li>C++</li>
-                                            <li>Console</li>
-                                            <li>Text UI</li>
-                                        </ul>
-                                    </article>
-                                </li>
-                                <li class="timeline-item">
-                                    <article class="timeline-entry">
-                                        <div class="timeline-year">
-                                            <time datetime="2019">2019</time>
-                                            <span>WEB</span>
-                                        </div>
-                                        <div class="timeline-main">
-                                            <h3>Guitar Songbook</h3>
-                                            <p data-copy="tl2019Text">
-                                                PHP + Vanilla JS: поиск, парсер аккордов, генерация аппликатур, темы и
-                                                автоскролл. Контент подхватывался из файловой структуры.
-                                            </p>
-                                        </div>
-                                        <ul aria-label="Guitar Songbook: stack" class="timeline-tags">
-                                            <li>PHP 7.4</li>
-                                            <li>Vanilla JS</li>
-                                            <li>HTML</li>
-                                            <li>CSS</li>
-                                            <li>Apache</li>
-                                        </ul>
-                                    </article>
-                                </li>
-                                <li class="timeline-item">
-                                    <article class="timeline-entry">
-                                        <div class="timeline-year">
-                                            <time>2020—22</time>
-                                            <span>WEB / GAME</span>
-                                        </div>
-                                        <div class="timeline-main">
-                                            <h3>Kwork · AxNikita · Uranium</h3>
-                                            <p data-copy="tl2020Text">
-                                                Коммерческие сайты, messenger на WebSocket, собственные
-                                                PHP/JS-библиотеки. Параллельно — Uranium для Mindustry с модульными
-                                                механиками и генераторами контента.
-                                            </p>
-                                        </div>
-                                        <ul aria-label="Kwork · AxNikita · Uranium: stack" class="timeline-tags">
-                                            <li>PHP</li>
-                                            <li>JavaScript</li>
-                                            <li>MySQL</li>
-                                            <li>WordPress</li>
-                                            <li>WebSocket</li>
-                                        </ul>
-                                    </article>
-                                </li>
-                                <li class="timeline-item">
-                                    <article class="timeline-entry">
-                                        <div class="timeline-year">
-                                            <time>2022—24</time>
-                                            <span>Production</span>
-                                        </div>
-                                        <div class="timeline-main">
-                                            <h3>Call center / Web commerce</h3>
-                                            <p data-copy="tlLegacyText">
-                                                Один большой PHP 7.4 legacy-проект: инструменты для операторов,
-                                                калькуляторы, таблицы, платежные страницы, API доставки и оплаты.
-                                            </p>
-                                        </div>
-                                        <ul aria-label="Call center / Web commerce: stack" class="timeline-tags">
-                                            <li>PHP 7.4</li>
-                                            <li>External API</li>
-                                            <li>Payments</li>
-                                        </ul>
-                                    </article>
-                                </li>
-                                <li class="timeline-item timeline-item--accent">
-                                    <article class="timeline-entry">
-                                        <div class="timeline-year">
-                                            <time>2024—26</time>
-                                            <span>GameDev</span>
-                                        </div>
-                                        <div class="timeline-main">
-                                            <h3>KazAXLibers</h3>
-                                            <p data-copy="tlKazText">
-                                                PHP build-pipeline для 7 Days to Die: JSON/XML-конфиги, генерация мода,
-                                                расчёт Power/Profit, тиры, XLSX-таблицы и генерация вариантов иконок.
-                                            </p>
-                                        </div>
-                                        <ul aria-label="KazAXLibers: stack" class="timeline-tags">
-                                            <li>PHP</li>
-                                            <li>XML / XPath</li>
-                                            <li>JSON</li>
-                                            <li>ImageMagick</li>
-                                            <li>PHPExcel</li>
-                                        </ul>
-                                    </article>
-                                </li>
-                                <li class="timeline-item">
-                                    <article class="timeline-entry">
-                                        <div class="timeline-year">
-                                            <time datetime="2025">2025</time>
-                                            <span>WEB</span>
-                                        </div>
-                                        <div class="timeline-main">
-                                            <h3>MamaMind / Momspace · Aurora Trans</h3>
-                                            <p data-copy="tl2025Text">
-                                                Momspace — тема с нуля, SPA/domLoader и production. Aurora Trans — child
-                                                theme, калькулятор доставки, формы и интеграция с внешним tracking.
-                                            </p>
-                                        </div>
-                                        <ul aria-label="MamaMind / Momspace · Aurora Trans: stack"
-                                            class="timeline-tags">
-                                            <li>WordPress</li>
-                                            <li>PHP</li>
-                                            <li>JavaScript</li>
-                                            <li>SCSS / CSS</li>
-                                            <li>ACF</li>
-                                        </ul>
-                                    </article>
-                                </li>
-                                <li class="timeline-item timeline-item--featured">
-                                    <article class="timeline-entry">
-                                        <div class="timeline-year">
-                                            <time>2025—26</time>
-                                            <span>WEB</span>
-                                        </div>
-                                        <div class="timeline-main">
-                                            <h3>MPRUS</h3>
-                                            <p data-copy="tlMprusText">
-                                                Платформа для селлеров: новости, профили, рейтинги, реакции,
-                                                уведомления, свой API, nonce, weighted rate limiter и InfiniteLoader для
-                                                Post/User/Term/Comment.
-                                            </p>
-                                        </div>
-                                        <ul aria-label="MPRUS: stack" class="timeline-tags">
-                                            <li>PHP</li>
-                                            <li>WordPress</li>
-                                            <li>JavaScript</li>
-                                            <li>MySQL</li>
-                                            <li>WP Object Cache</li>
-                                        </ul>
-                                    </article>
-                                </li>
-                                <li class="timeline-item">
-                                    <article class="timeline-entry">
-                                        <div class="timeline-year">
-                                            <time datetime="2026">2026</time>
-                                            <span>WEB</span>
-                                        </div>
-                                        <div class="timeline-main">
-                                            <h3>Сибирский Дом</h3>
-                                            <p data-copy="tl2026Text">
-                                                Доработка чужой WordPress-темы: адаптив, исправление JavaScript,
-                                                Rutube/Fancybox, дополнительные блоки и SEO-страницы под требования
-                                                заказчика.
-                                            </p>
-                                        </div>
-                                        <ul aria-label="Сибирский Дом: stack" class="timeline-tags">
-                                            <li>WordPress</li>
-                                            <li>PHP</li>
-                                            <li>JavaScript</li>
-                                            <li>jQuery</li>
-                                            <li>ACF</li>
-                                        </ul>
-                                    </article>
-                                </li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section aria-labelledby="projects-title" class="hero projects-section" id="projects">
-            <aside aria-label="Индекс портфолио" class="hero-rail">
-                <strong>03</strong>
-                <span>WEB / GAMEDEV / PROJECTS</span>
-                <strong>26</strong>
-            </aside>
-            <div class="intro">
-                <p class="kicker" data-copy="kicker">MPRUS / Momspace / Uranium / KazAXLibers</p>
-                <h2 class="projects-title" id="projects-title">
-                    <span data-copy="t1">Проекты,</span><br/>
-                    <span data-copy="t2">которые</span>
-                    <span class="accent-word" data-copy="t3">работают.</span>
-                </h2>
-                <div class="intro-details">
-                    <p class="stack-note" data-copy="meta">WEB / WORDPRESS / API<br/>GAMEDEV / MODDING<br/>2018—2026</p>
-                    <p class="intro-copy" data-copy="lead">Основные кейсы: MPRUS, Momspace, Aurora Trans, Сибирский Дом,
-                        Uranium и KazAXLibers.</p>
-                </div>
-                <ul aria-label="Ключевые направления" class="tags">
-                    <li data-copy="chip1">Full-stack</li>
-                    <li>PHP</li>
-                    <li>JavaScript</li>
-                    <li>WordPress</li>
-                    <li>GameDev</li>
-                </ul>
-            </div>
-            <article aria-labelledby="featured-title" class="featured-project" id="web">
-                <figure class="project-figure">
-                    <div aria-hidden="true" class="project-meta">
-                        <span>MPRUS</span>
-                        <span>2025—2026 / WEB</span>
-                    </div>
-                    <img alt="Интерфейс информационной платформы MPRUS" src="assets/about/mprus-preview.webp"/>
-                    <figcaption class="project-caption">
-                        <h2 id="featured-title">MPRUS</h2>
-                        <p data-copy="caseText">
-                            Инфопортал для селлеров маркетплейсов: новости, рейтинги, реакции, профили и собственный
-                            API.
-                        </p>
-                    </figcaption>
-                </figure>
-            </article>
-            <div aria-label="Направления портфолио" class="hero-facts" id="gamedev">
-                <div class="fact">
-                    <strong>WEB</strong>
-                    <span data-copy="b1">Momspace · MPRUS · Aurora Trans · Сибирский Дом</span>
-                </div>
-                <div class="fact">
-                    <strong>GAME</strong>
-                    <span data-copy="b2">Heroes of Danger · Uranium · KazAXLibers · другие моды</span>
-                </div>
-                <div class="fact">
-                    <strong data-copy="b3a">CODE</strong>
-                    <span data-copy="b3">GitHub / ax-nikita</span>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="site-footer" id="contact">
-        <div class="footer-inner">
-            <div class="footer-primary">
-                <div>
-                    <p class="footer-eyebrow" data-copy="footEye">Контакты / новый проект</p>
-                    <h2 data-copy="footTitle">Нужен разработчик?<br/><span>Обсудим задачу.</span></h2>
-                </div>
-                <div class="contact-panel">
-                    <p data-copy="footText">Опишите задачу, текущий стек или роль — отвечу по существу.</p>
-                    <address>
-                        <a class="contact-link" href="https://kwork.ru/user/axnikita" rel="noopener noreferrer"
-                           target="_blank">
-                            <span data-copy="contact">Kwork / написать</span>
-                            <span aria-hidden="true">↗</span>
-                        </a>
-                    </address>
-                </div>
-            </div>
-            <div class="footer-meta">
-                <span>© 2026 NIKITA</span>
-                <span>WEB / GAMEDEV</span>
-                <span>PORTFOLIO / ABOUT V1.8</span>
-            </div>
-        </div>
-    </footer>
+<body data-page="about">
+  <a class="skip-link" data-lang-ru="Перейти к содержимому" data-lang-en="Skip to content" href="#main">Перейти к содержимому</a>
+  <div class="site-shell">
+    <div class="template-slot template-slot--header" domLoader="templates/header.html" requestWeight="0.5"></div>
+    <main id="main" data-page-key="about" data-page-title="Zonov Nikita / axnikita - Portfolio" data-page-description="Portfolio of Zonov Nikita: full-stack WEB development, WordPress, PHP, JavaScript, REST API, SPA, GameDev and modding projects." data-role-ru="Full-stack WEB developer · PHP / JavaScript / WordPress" data-role-en="Full-stack WEB developer · PHP / JavaScript / WordPress" data-footer-eyebrow-ru="Контакты / новый проект" data-footer-eyebrow-en="Contact / new project" data-footer-title-ru="Проект или вакансия? &lt;span&gt;Обсудим.&lt;/span&gt;" data-footer-title-en="Project or role? &lt;span&gt;Let’s talk.&lt;/span&gt;" data-footer-text-ru="Опишите задачу, текущий стек или роль — отвечу по существу." data-footer-text-en="Send the task, current stack or role details — I’ll reply with the relevant specifics." data-footer-version="PORTFOLIO / ABOUT V1.8">
+<section aria-labelledby="about-title" class="about-section" id="about">
+<div class="section-shell">
+<header class="section-heading section-heading--about-primary">
+<p aria-hidden="true" class="section-index">01</p>
+<div class="section-heading-copy"><p class="section-kicker" data-copy="aboutKicker">axnikita / Zonov Nikita</p>
+<h1 data-copy="aboutTitle" id="about-title">Full-stack WEB developer.<br/><span>PHP / JavaScript / WordPress.</span></h1></div>
+<p class="section-intro" data-copy="aboutIntro">Коммерческая разработка с 2020: самописные сайты, WordPress, REST API, SPA, legacy и внутренние инструменты. GameDev и modding — отдельное направление.</p>
+</header>
+<div class="about-composer about-composer--portrait">
+<div aria-hidden="true" class="about-portrait-bg">
+<img alt="" src="assets/images/about/portrait.png"/>
 </div>
-
-
-<script src="assets/js/axnikitaJS.js" defer></script>
-<script src="assets/js/site-runtime.js" defer></script>
-<script src="assets/js/about.js" defer></script>
+<div class="about-panel">
+<ul aria-label="Профиль" class="identity-stack"><li>axnikita</li><li>Zonov Nikita</li><li>Full-stack WEB</li><li>Commercial since 2020</li></ul>
+<div class="identity-head"><p class="identity-eyebrow" data-copy="identityEyebrow">WEB / production / GameDev</p>
+<p class="identity-role" data-copy="identityRole">Разрабатываю и дорабатываю коммерческие WEB-проекты: PHP, JavaScript, WordPress, API и frontend.</p></div>
+<div class="identity-copy">
+<p data-copy="identityText1"><strong>Momspace:</strong> тема с нуля, SPA/domLoader и запуск в production. <strong>MPRUS:</strong> собственный API, nonce, weighted rate limiter и InfiniteLoader для Post/User/Term/Comment.</p>
+<p data-copy="identityText2">В production/legacy работал с внутренними инструментами call center, платежными страницами, API доставки и оплаты. В «Сибирском Доме» исправлял адаптив, JavaScript и добавлял новые блоки в чужую WordPress-тему.</p>
+<p data-copy="identityText3">GameDev веду параллельно: <strong>Uranium</strong> для Mindustry, <strong>KazAXLibers</strong> для 7 Days to Die, C++/C#/Unity и собственные инструменты для генерации и балансировки контента.</p>
+</div>
+<div aria-label="Профили и контакты" class="profile-links"><a href="https://kwork.ru/user/axnikita" rel="noopener noreferrer" target="_blank">Kwork ↗</a><a href="https://github.com/ax-nikita" rel="noopener noreferrer" target="_blank">GitHub ↗</a><a data-copy="contactShort" href="#contact">Обсудить задачу ↓</a></div>
+<div aria-label="Коротко" class="facts-grid">
+<div class="fact-item"><strong data-copy="fact1t">Основной стек</strong><span>PHP · JavaScript · WordPress · MySQL</span></div>
+<div class="fact-item"><strong data-copy="fact2t">WEB</strong><span>REST API · SPA · legacy · integrations</span></div>
+<div class="fact-item"><strong data-copy="fact3t">GameDev</strong><span>C++ · C# · Unity · JS modding · tooling</span></div>
+</div></div>
+</div>
+<div aria-label="Ключевые технические направления" class="about-techgrid"><article class="tech-card"><strong>WEB / Core</strong><p>PHP · JavaScript · WordPress · MySQL · HTML · SCSS</p><span class="tech-example">Momspace / MPRUS / Aurora Trans</span></article><article class="tech-card"><strong>App layer</strong><p>REST API · SPA · axLoader · domLoader · InfiniteLoader · Cache</p><span class="tech-example">API / dynamic UI / loaders</span></article><article class="tech-card"><strong>Production</strong><p>Redis · KeyDB · Gearman · Cron · Apache · Nginx · Payments</p><span class="tech-example">legacy / delivery / integrations</span></article><article class="tech-card"><strong>GameDev</strong><p>C++ · C# · Unity · JS modding · XML · JSON · PHP tooling</p><span class="tech-example">Uranium / KazAXLibers</span></article></div>
+</div>
+</section><section aria-labelledby="timeline-title" class="timeline-section" id="timeline">
+<div class="section-shell">
+<header class="section-heading section-heading--timeline">
+<p aria-hidden="true" class="section-index">02</p>
+<div class="section-heading-copy">
+<p class="section-kicker" data-copy="timelineKicker">Опыт / проекты</p>
+<h2 data-copy="timelineTitle" id="timeline-title">2018 → 2026.<br/><span>WEB + GameDev.</span></h2>
+</div>
+<p class="section-intro" data-copy="timelineIntro">Коммерческая разработка с 2020. До этого — первые собственные проекты; GameDev и modding идут параллельно.</p>
+</header>
+<div class="timeline-scroll-wrap">
+<div aria-hidden="true" class="timeline-edge-cue">
+<span class="timeline-edge-label">drag / scroll</span>
+<svg aria-hidden="true" class="timeline-edge-arrow" focusable="false" viewbox="0 0 56 18">
+<path class="timeline-edge-arrow-line" d="M1 9H49"></path>
+<path class="timeline-edge-arrow-head" d="M43 3L49 9L43 15"></path>
+</svg>
+</div>
+<div class="timeline-scroll">
+<div class="timeline-shell">
+<ol aria-label="Хронология проектов" class="timeline">
+<li class="timeline-item">
+<article class="timeline-entry">
+<div class="timeline-year">
+<time datetime="2018">2018</time>
+<span>GameDev</span>
+</div>
+<div class="timeline-main">
+<h3>Heroes of Danger</h3>
+<p data-copy="tl2018Text">C++ roguelike: процедурные комнаты, бои, инвентарь, NPC и сохранения. Первый законченный игровой проект; логика была построена на функциях и крупных switch/case.</p>
+</div>
+<ul aria-label="Heroes of Danger: stack" class="timeline-tags"><li>C++</li><li>Console</li><li>Text UI</li></ul>
+</article>
+</li>
+<li class="timeline-item">
+<article class="timeline-entry">
+<div class="timeline-year">
+<time datetime="2019">2019</time>
+<span>WEB</span>
+</div>
+<div class="timeline-main">
+<h3>Guitar Songbook</h3>
+<p data-copy="tl2019Text">
+                      PHP + Vanilla JS: поиск, парсер аккордов, генерация аппликатур, темы и автоскролл. Контент подхватывался из файловой структуры.
+                    </p>
+</div>
+<ul aria-label="Guitar Songbook: stack" class="timeline-tags"><li>PHP 7.4</li><li>Vanilla JS</li><li>HTML</li><li>CSS</li><li>Apache</li></ul>
+</article>
+</li>
+<li class="timeline-item">
+<article class="timeline-entry">
+<div class="timeline-year">
+<time>2020—22</time>
+<span>WEB / GAME</span>
+</div>
+<div class="timeline-main">
+<h3>Kwork · AxNikita · Uranium</h3>
+<p data-copy="tl2020Text">
+                      Коммерческие сайты, messenger на WebSocket, собственные PHP/JS-библиотеки. Параллельно — Uranium для Mindustry с модульными механиками и генераторами контента.
+                    </p>
+</div>
+<ul aria-label="Kwork · AxNikita · Uranium: stack" class="timeline-tags"><li>PHP</li><li>JavaScript</li><li>MySQL</li><li>WordPress</li><li>WebSocket</li></ul>
+</article>
+</li>
+<li class="timeline-item">
+<article class="timeline-entry">
+<div class="timeline-year">
+<time>2022—24</time>
+<span>Production</span>
+</div>
+<div class="timeline-main">
+<h3>Call center / Web commerce</h3>
+<p data-copy="tlLegacyText">
+                      Один большой PHP 7.4 legacy-проект: инструменты для операторов, калькуляторы, таблицы, платежные страницы, API доставки и оплаты.
+                    </p>
+</div>
+<ul aria-label="Call center / Web commerce: stack" class="timeline-tags"><li>PHP 7.4</li><li>External API</li><li>Payments</li></ul>
+</article>
+</li>
+<li class="timeline-item timeline-item--accent">
+<article class="timeline-entry">
+<div class="timeline-year">
+<time>2024—26</time>
+<span>GameDev</span>
+</div>
+<div class="timeline-main">
+<h3>KazAXLibers</h3>
+<p data-copy="tlKazText">
+                      PHP build-pipeline для 7 Days to Die: JSON/XML-конфиги, генерация мода, расчёт Power/Profit, тиры, XLSX-таблицы и генерация вариантов иконок.
+                    </p>
+</div>
+<ul aria-label="KazAXLibers: stack" class="timeline-tags"><li>PHP</li><li>XML / XPath</li><li>JSON</li><li>ImageMagick</li><li>PHPExcel</li></ul>
+</article>
+</li>
+<li class="timeline-item">
+<article class="timeline-entry">
+<div class="timeline-year">
+<time datetime="2025">2025</time>
+<span>WEB</span>
+</div>
+<div class="timeline-main">
+<h3>MamaMind / Momspace · Aurora Trans</h3>
+<p data-copy="tl2025Text">
+                      Momspace — тема с нуля, SPA/domLoader и production. Aurora Trans — child theme, калькулятор доставки, формы и интеграция с внешним tracking.
+                    </p>
+</div>
+<ul aria-label="MamaMind / Momspace · Aurora Trans: stack" class="timeline-tags"><li>WordPress</li><li>PHP</li><li>JavaScript</li><li>SCSS / CSS</li><li>ACF</li></ul>
+</article>
+</li>
+<li class="timeline-item timeline-item--featured">
+<article class="timeline-entry">
+<div class="timeline-year">
+<time>2025—26</time>
+<span>WEB</span>
+</div>
+<div class="timeline-main">
+<h3>MPRUS</h3>
+<p data-copy="tlMprusText">
+                      Платформа для селлеров: новости, профили, рейтинги, реакции, уведомления, свой API, nonce, weighted rate limiter и InfiniteLoader для Post/User/Term/Comment.
+                    </p>
+</div>
+<ul aria-label="MPRUS: stack" class="timeline-tags"><li>PHP</li><li>WordPress</li><li>JavaScript</li><li>MySQL</li><li>WP Object Cache</li></ul>
+</article>
+</li>
+<li class="timeline-item">
+<article class="timeline-entry">
+<div class="timeline-year">
+<time datetime="2026">2026</time>
+<span>WEB</span>
+</div>
+<div class="timeline-main">
+<h3>Сибирский Дом</h3>
+<p data-copy="tl2026Text">
+                      Доработка чужой WordPress-темы: адаптив, исправление JavaScript, Rutube/Fancybox, дополнительные блоки и SEO-страницы под требования заказчика.
+                    </p>
+</div>
+<ul aria-label="Сибирский Дом: stack" class="timeline-tags"><li>WordPress</li><li>PHP</li><li>JavaScript</li><li>jQuery</li><li>ACF</li></ul>
+</article>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div></section><section aria-labelledby="projects-title" class="hero projects-section" id="projects">
+<aside aria-label="Индекс портфолио" class="hero-rail">
+<strong>03</strong>
+<span>WEB / GAMEDEV / PROJECTS</span>
+<strong>26</strong>
+</aside>
+<div class="intro">
+<p class="kicker" data-copy="kicker">MPRUS / Momspace / Uranium / KazAXLibers</p>
+<h2 class="projects-title" id="projects-title">
+<span data-copy="t1">Проекты,</span><br/>
+<span data-copy="t2">которые</span>
+<span class="accent-word" data-copy="t3">работают.</span>
+</h2>
+<div class="intro-details">
+<p class="stack-note" data-copy="meta">WEB / WORDPRESS / API<br/>GAMEDEV / MODDING<br/>2018—2026</p>
+<p class="intro-copy" data-copy="lead">Основные кейсы: MPRUS, Momspace, Aurora Trans, Сибирский Дом, Uranium и KazAXLibers.</p>
+</div>
+<ul aria-label="Ключевые направления" class="tags">
+<li data-copy="chip1">Full-stack</li>
+<li>PHP</li>
+<li>JavaScript</li>
+<li>WordPress</li>
+<li>GameDev</li>
+</ul>
+</div>
+<article aria-labelledby="featured-title" class="featured-project" id="web">
+<figure class="project-figure">
+<div aria-hidden="true" class="project-meta">
+<span>MPRUS</span>
+<span>2025—2026 / WEB</span>
+</div>
+<img alt="Интерфейс информационной платформы MPRUS" src="assets/images/about/mprus-preview.webp"/>
+<figcaption class="project-caption">
+<h2 id="featured-title">MPRUS</h2>
+<p data-copy="caseText">
+                Инфопортал для селлеров маркетплейсов: новости, рейтинги, реакции, профили и собственный API.
+              </p>
+</figcaption>
+</figure>
+</article>
+<div aria-label="Направления портфолио" class="hero-facts" id="gamedev">
+<div class="fact">
+<strong>WEB</strong>
+<span data-copy="b1">Momspace · MPRUS · Aurora Trans · Сибирский Дом</span>
+</div>
+<div class="fact">
+<strong>GAME</strong>
+<span data-copy="b2">Heroes of Danger · Uranium · KazAXLibers · другие моды</span>
+</div>
+<div class="fact">
+<strong data-copy="b3a">CODE</strong>
+<span data-copy="b3">GitHub / ax-nikita</span>
+</div>
+</div>
+</section></main>
+    <div class="template-slot template-slot--footer" domLoader="templates/footer.html" requestWeight="0.5"></div>
+  </div>
+  <dialog aria-label="Просмотр изображения" class="lightbox" id="lightbox">
+    <div class="lightbox-inner">
+      <button aria-label="Закрыть" class="lightbox-close" data-lightbox-close type="button">×</button>
+      <img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="/>
+    </div>
+  </dialog>
 </body>
 </html>

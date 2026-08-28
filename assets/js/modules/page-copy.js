@@ -1,4 +1,4 @@
-export const pageCopy = {
+export const PAGE_COPY = {
   "about": {
     "ru": {
       "skip": "Перейти к содержимому",
@@ -341,4 +341,4 @@ export const pageCopy = {
       "footerText": "I am interested in game systems, balance, modding and tooling for working with large amounts of game content."
     }
   }
-} as const;
+};

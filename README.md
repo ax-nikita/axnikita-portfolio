@@ -1,6 +1,6 @@
 # axnikita / Zonov Nikita Portfolio
 
-Astro portfolio site rebuilt from the approved handoff in `baza/reference`.
+Static portfolio rebuilt from the approved files in `reference/`.
 
 ## Routes
 
@@ -10,35 +10,22 @@ Astro portfolio site rebuilt from the approved handoff in `baza/reference`.
 
 ## Architecture
 
-- `src/layouts/BaseLayout.astro` - outer document shell
-- `src/components/SiteHeader.astro` - the only header markup source
-- `src/components/SiteFooter.astro` - the only footer markup source
-- `src/pages/` - page content ported from the reference `<main>` blocks
-- `src/styles/` - modular SCSS with `@use`
-- `src/scripts/portfolio-runtime.js` - shared axnikitaJS-powered behavior
-- `public/assets/js/axnikitaJS.js` - supplied axnikitaJS 3.0.1 runtime
+- `reference/` - approved visual/content reference only
+- `index.html`, `web/index.html`, `gamedev/index.html` - generated static pages with ported `<main>` content
+- `templates/header.html`, `templates/footer.html` - the only shared header/footer markup
+- `assets/scss/main.scss` - Sass entrypoint compiled to `assets/css/main.css`
+- `assets/js/site-runtime.js` - shared axnikitaJS-powered runtime
+- `assets/js/about.js`, `assets/js/web.js`, `assets/js/gamedev.js` - page modules reinitialized after `end_load_spa`
+- `assets/images/` - organized image assets copied from `reference/assets/`
+- `vendor/axnikitaJS/axnikitaJS.js` - supplied axnikitaJS 3.0.1 runtime copied into `assets/js/`
 
 ## Commands
 
 ```bash
 npm install
-npm test
 npm run build
+npm test
 npm run dev
 ```
 
-If Astro telemetry cannot write to the local user profile in a restricted environment, run:
-
-```bash
-ASTRO_TELEMETRY_DISABLED=1 npm run build
-```
-
-On PowerShell:
-
-```powershell
-$env:ASTRO_TELEMETRY_DISABLED='1'; npm run build
-```
-
-## GitHub Pages
-
-The repository includes `.github/workflows/deploy-pages.yml`. Enable GitHub Pages with **GitHub Actions** as the source; the workflow installs dependencies, builds Astro into `dist`, and deploys that artifact.
+`npm run build` regenerates the static pages from `reference/` and compiles `assets/scss/main.scss` to `assets/css/main.css`.

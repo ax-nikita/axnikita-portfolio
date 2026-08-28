@@ -96,7 +96,7 @@ function createContext() {
 
 function loadLibrary() {
     const {context, requests} = createContext();
-    vm.runInContext(fs.readFileSync('public/assets/js/axnikitaJS.js', 'utf8'), context, {filename: 'axnikitaJS.js'});
+    vm.runInContext(fs.readFileSync('assets/js/axnikitaJS.js', 'utf8'), context, {filename: 'axnikitaJS.js'});
     return {context, requests};
 }
 

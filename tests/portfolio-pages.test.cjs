@@ -4,37 +4,69 @@ const test = require("node:test");
 
 const read = (path) => fs.readFileSync(path, "utf8");
 
-test("production pages keep styles and scripts out of page source", () => {
-  ["src/pages/index.astro", "src/pages/web.astro", "src/pages/gamedev.astro"].forEach((path) => {
+const pageEntries = [
+  ["about", "index.html"],
+  ["web", "web/index.html"],
+  ["gamedev", "gamedev/index.html"],
+];
+
+const readGeneratedCopy = () => {
+  const source = read("assets/js/modules/page-copy.js");
+  const json = source.match(/export const PAGE_COPY = ([\s\S]*);\s*$/)?.[1];
+  assert.ok(json, "page-copy.js exports PAGE_COPY as generated JSON");
+  return JSON.parse(json);
+};
+
+test("production pages keep inline styles and scripts out of page source", () => {
+  pageEntries.forEach(([, path]) => {
     const source = read(path);
+    const inlineScripts = [...source.matchAll(/<script\b[^>]*>([\s\S]*?)<\/script>/gi)]
+      .map((match) => match[1].trim())
+      .filter(Boolean);
+
     assert.doesNotMatch(source, /<style\b/i);
-    assert.doesNotMatch(source, /<script\b/i);
-    assert.doesNotMatch(source, /portfolio_(about|web|gamedev)/);
-    assert.doesNotMatch(source, /\b(src|data-lightbox)="assets\//);
+    assert.deepEqual(inlineScripts, []);
   });
 });
 
-test("legacy data-copy markers are backed by data-lang attributes", () => {
-  ["src/pages/index.astro", "src/pages/web.astro", "src/pages/gamedev.astro"].forEach((path) => {
+test("page mains are ported from reference with generated page metadata", () => {
+  pageEntries.forEach(([pageKey, path]) => {
     const source = read(path);
-    const missing = [...source.matchAll(/data-copy="([^"]+)"(?![^>]*data-lang-ru)/g)].map((match) => match[1]);
+    const main = source.match(/<main\b[\s\S]*?<\/main>/i)?.[0] || "";
+
+    assert.match(main, new RegExp(`data-page-key="${pageKey}"`));
+    assert.match(main, /data-page-title="/);
+    assert.match(main, /data-footer-title-ru="/);
+  });
+});
+
+test("image references use organized assets/images paths", () => {
+  pageEntries.forEach(([, path]) => {
+    const source = read(path);
+
+    assert.doesNotMatch(source, /\b(?:src|data-lightbox)="(?:\.\.\/)?assets\/(?:about|web|gamedev)\//);
+    assert.doesNotMatch(source, /\b(?:src|data-lightbox)="reference\//);
+  });
+});
+
+test("legacy data-copy markers are backed by generated reference copy", () => {
+  const copy = readGeneratedCopy();
+
+  pageEntries.forEach(([pageKey, path]) => {
+    const source = read(path);
+    const keys = [...source.matchAll(/data-copy="([^"]+)"/g)].map((match) => match[1]);
+    const missing = keys.filter((key) => copy[pageKey]?.ru?.[key] === undefined || copy[pageKey]?.en?.[key] === undefined);
+
     assert.deepEqual(missing, []);
   });
 });
 
 test("scss uses modules instead of deprecated imports", () => {
-  const files = fs.readdirSync("src/styles", { recursive: true })
+  const files = fs.readdirSync("assets/scss", { recursive: true })
     .filter((path) => String(path).endsWith(".scss"))
-    .map((path) => `src/styles/${path}`);
+    .map((path) => `assets/scss/${path}`);
 
   files.forEach((path) => {
     assert.doesNotMatch(read(path), /@import\b/);
   });
-});
-
-test("portfolio runtime source and public asset stay synchronized", () => {
-  assert.equal(
-    read("src/scripts/portfolio-runtime.js"),
-    read("public/assets/js/portfolio-runtime.js")
-  );
 });

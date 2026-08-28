@@ -1,638 +1,427 @@
-<!DOCTYPE html>
-
-<html data-lang="ru" lang="ru">
+<!doctype html>
+<html lang="ru" data-lang="ru">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width,initial-scale=1" name="viewport"/>
-    <meta content="WEB-проекты axnikita / Zonov Nikita: PHP, JavaScript, WordPress, API, SPA, production и legacy."
-          name="description"/>
-    <title>Nikita — WEB Portfolio</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&amp;family=Unbounded:wght@400;500;600;700&amp;display=swap"
-          rel="stylesheet"/>
-
-    <link rel="stylesheet" href="../assets/css/web.css"/>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="description" content="WEB portfolio cases by Zonov Nikita: PHP, JavaScript, WordPress, REST API, production support and commercial full-stack development."/>
+  <title>Zonov Nikita / axnikita - WEB Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700;800;900&family=Unbounded:wght@400;500;600;700&display=swap"/>
+  <link rel="stylesheet" href="../assets/css/main.css"/>
+  <script src="../assets/js/axnikitaJS.js" defer></script>
+  <script type="module" src="../assets/js/site-runtime.js"></script>
 </head>
-<body>
-<a class="skip-link" href="#main">К содержимому</a>
-<div class="site-shell">
-    <header class="site-header">
-        <div class="header-inner">
-            <a class="brand" href="../#about">
-                <span aria-hidden="true" class="brand-mark"></span>
-                axnikita / Zonov Nikita
-            </a>
-            <p class="role">Full-stack WEB developer · PHP / JavaScript / WordPress</p>
-            <div class="header-actions">
-                <nav aria-label="Основная навигация" class="site-nav">
-                    <ul>
-                        <li><a data-copy="navAbout" href="../#about">Обо мне</a></li>
-                        <li><a aria-current="page" href="./#web-top">WEB</a></li>
-                        <li><a href="../gamedev/">GameDev</a></li>
-                    </ul>
-                </nav>
-                <div aria-label="Язык" class="language-switcher">
-                    <button aria-pressed="true" class="lang-button" data-lang-button="ru" type="button">RU</button>
-                    <button aria-pressed="false" class="lang-button" data-lang-button="en" type="button">EN</button>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main id="main">
-        <section aria-labelledby="web-title" class="web-hero" id="web-top">
-            <div class="page-shell">
-                <div class="hero-grid">
-                    <p aria-hidden="true" class="hero-index">WEB</p>
-                    <div>
-                        <p class="eyebrow" data-copy="heroEyebrow">Портфолио / 2019—2026</p>
-                        <h1 id="web-title">WEB PROJECTS.<span
-                                data-copy="heroTitleAccent">PHP / JavaScript / WordPress.</span></h1>
-                    </div>
-                    <div class="hero-copy">
-                        <div aria-label="Кратко о WEB-портфолио" class="hero-snapshot">
-                            <div class="hero-snapshot-main">
-                                <strong>07</strong>
-                                <span data-copy="snapshotCases">кейсов</span>
-                            </div>
-                            <div class="hero-snapshot-row">
-                                <span data-copy="snapshotCommercial">Коммерческий WEB-опыт</span>
-                                <strong>2020—2026</strong>
-                            </div>
-                            <div class="hero-snapshot-row">
-                                <span data-copy="snapshotCore">Основной стек</span>
-                                <strong>PHP · JS · WP</strong>
-                            </div>
-                        </div>
-                        <p data-copy="heroText">
-                            Коммерческие сайты, WordPress-платформы, production и legacy. Сначала — актуальные проекты,
-                            ниже — ранние работы и развитие собственного стека.
-                        </p>
-                        <ul class="hero-meta">
-                            <li>axnikita / Zonov Nikita</li>
-                            <li>Full-stack WEB</li>
-                            <li data-copy="snapshotOrder">Актуальные сначала</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <nav aria-label="Навигация по WEB-кейсам" class="case-index">
-            <div class="page-shell">
-                <ol class="case-index-list">
-                    <li><a aria-label="01. MPRUS" href="#web06"><span>01</span><span>MPRUS</span></a></li>
-                    <li><a aria-label="02. Aurora / СибДом"
-                           href="#web07"><span>02</span><span>Aurora / СибДом</span></a></li>
-                    <li><a aria-label="03. Momspace" href="#web05"><span>03</span><span>Momspace</span></a></li>
-                    <li><a aria-label="04. Legacy / commerce"
-                           href="#web04"><span>04</span><span>Legacy / commerce</span></a></li>
-                    <li><a aria-label="05. AxNikita.com" href="#web03"><span>05</span><span>AxNikita.com</span></a></li>
-                    <li><a aria-label="06. Freelance" href="#web02"><span>06</span><span>Freelance</span></a></li>
-                    <li><a aria-label="07. Songbook" href="#web01"><span>07</span><span>Songbook</span></a></li>
-                </ol>
-            </div>
-            <div aria-hidden="true" class="case-rail-thumb">
-                <span class="case-rail-dot"></span>
-            </div>
-            <div aria-hidden="true" class="case-rail-fixed-label">MPRUS</div>
-            <div aria-hidden="true" class="case-rail-fixed-count">01/07</div>
-        </nav>
-        <section aria-labelledby="web06-title" class="case case--featured" id="web06">
-            <div class="page-shell case-inner">
-                <p aria-hidden="true" class="case-no">01</p>
-                <div class="case-main">
-                    <header class="case-head">
-                        <div>
-                            <p class="case-kicker" data-copy="c6Kicker">2025—2026 / платформа для селлеров /
-                                full-stack</p>
-                            <h2 class="case-title" id="web06-title">MPRUS<br/><span data-copy="c6Subtitle">Платформа для селлеров маркетплейсов</span>
-                            </h2>
-                        </div>
-                        <p class="case-lead" data-copy="c6Lead">
-                            Информационная и социальная платформа для селлеров маркетплейсов. Здесь знакомые механики из
-                            Momspace были переработаны в более строгую структуру: API, сервисы, обобщённые loaders и
-                            отдельные подсистемы.
-                        </p>
-                    </header>
-                    <div class="gallery gallery--2">
-                        <figure class="shot shot--wide">
-                            <button aria-label="Открыть MPRUS feed" data-lightbox="../assets/web/web06_mprus_feed.png"
-                                    type="button">
-                                <img alt="MPRUS: лента публикаций" decoding="async" height="1152" loading="lazy"
-                                     src="../assets/web/web06_mprus_feed.png" width="2048"/>
-                            </button>
-                            <figcaption>Feed / social</figcaption>
-                        </figure>
-                        <figure class="shot shot--wide">
-                            <button aria-label="Открыть MPRUS ratings"
-                                    data-lightbox="../assets/web/web06_mprus_ratings.png" type="button">
-                                <img alt="MPRUS: рейтинги компаний и пользователей" decoding="async" height="1152"
-                                     loading="lazy" src="../assets/web/web06_mprus_ratings.png" width="2048"/>
-                            </button>
-                            <figcaption>Ratings / users</figcaption>
-                        </figure>
-                    </div>
-                    <div class="case-info">
-                        <div class="info-cell">
-                            <h3 data-copy="details">Реализация</h3>
-                            <p data-copy="c6Details">Свой API dispatcher, nonce и weighted rate limiter. InfiniteLoader
-                                разделён на Loader / Controller / Service и работает с Post/User/Term/Comment.</p>
-                            <ul class="stack">
-                                <li>PHP</li>
-                                <li>WordPress</li>
-                                <li>JavaScript</li>
-                                <li>MySQL</li>
-                                <li>WP Object Cache</li>
-                            </ul>
-                        </div>
-                        <div class="info-cell">
-                            <h3 data-copy="result">Результат</h3>
-                            <p data-copy="c6Result">Собрана рабочая основа портала: лента и новости, профили, рейтинги
-                                компаний и пользователей, реакции, закладки, подписки, уведомления и API. Эти функции
-                                используют общую инфраструктуру сервисов и загрузки.</p>
-                        </div>
-                        <div class="info-cell">
-                            <h3 data-copy="learned">Что здесь показательно</h3>
-                            <p data-copy="c6Learned">Сделал одну систему подгрузки для постов, пользователей, рубрик и
-                                комментариев вместо отдельных AJAX-решений. Она сохраняет фильтры, продолжает выдачу с
-                                нужного места и возвращает готовый серверный HTML — поэтому infinite scroll, фильтрация
-                                и SSR работают через один механизм.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section aria-labelledby="web07-title" class="case" id="web07">
-            <div class="page-shell case-inner">
-                <p aria-hidden="true" class="case-no">02</p>
-                <div class="case-main">
-                    <header class="case-head">
-                        <div>
-                            <p class="case-kicker" data-copy="c7Kicker">2025—2026 / другие коммерческие проекты</p>
-                            <h2 class="case-title" id="web07-title">Aurora Trans +<br/><span>Сибирский Дом</span></h2>
-                        </div>
-                        <p class="case-lead" data-copy="c7Lead">
-                            Два противоположных сценария: в Aurora Trans — развитие собственной базовой WordPress-темы
-                            через child theme; в «Сибирском Доме» — работа внутри уже существующей чужой кодовой базы.
-                        </p>
-                    </header>
-                    <div class="other-grid">
-                        <article class="subcase">
-                            <header class="subcase-head">
-                                <h3>Aurora Trans</h3>
-                                <span>2025 / WordPress</span>
-                            </header>
-                            <p data-copy="auroraText">
-                                Child theme поверх axnikitaEngine: 27 reusable Block Patterns, SPA-подобная навигация,
-                                калькулятор доставки, формы, новости и интеграция с внешней системой отслеживания
-                                грузов.
-                            </p>
-                            <figure class="shot shot--wide">
-                                <button aria-label="Открыть Aurora Trans"
-                                        data-lightbox="../assets/web/web07_aurora_home.png" type="button">
-                                    <img alt="Aurora Trans: главная страница" decoding="async" height="1152"
-                                         loading="lazy" src="../assets/web/web07_aurora_home.png" width="2048"/>
-                                </button>
-                            </figure>
-                            <ul class="stack">
-                                <li>WordPress</li>
-                                <li>PHP</li>
-                                <li>JavaScript</li>
-                                <li>SCSS / CSS</li>
-                                <li>jQuery</li>
-                            </ul>
-                        </article>
-                        <article class="subcase">
-                            <header class="subcase-head">
-                                <h3>Сибирский Дом</h3>
-                                <span>2026 / existing codebase</span>
-                            </header>
-                            <p data-copy="sibirskyText">
-                                Подключился к существующей WordPress-теме: адаптив, JavaScript-сценарии,
-                                Rutube/Fancybox, дополнительные блоки и страницы, повторное использование существующих
-                                компонентов и SEO landing template.
-                            </p>
-                            <div class="gallery gallery--2">
-                                <figure class="shot shot--wide">
-                                    <button aria-label="Открыть каталог Сибирский Дом"
-                                            data-lightbox="../assets/web/web07_sibirsky_catalog.png" type="button">
-                                        <img alt="Сибирский Дом: каталог проектов" decoding="async" height="1152"
-                                             loading="lazy" src="../assets/web/web07_sibirsky_catalog.png"
-                                             width="2048"/>
-                                    </button>
-                                </figure>
-                                <figure class="shot shot--wide">
-                                    <button aria-label="Открыть главную Сибирский Дом"
-                                            data-lightbox="../assets/web/web07_sibirsky_home.png" type="button">
-                                        <img alt="Сибирский Дом: главная страница" decoding="async" height="1152"
-                                             loading="lazy" src="../assets/web/web07_sibirsky_home.png" width="2048"/>
-                                    </button>
-                                </figure>
-                            </div>
-                            <ul class="stack">
-                                <li>WordPress</li>
-                                <li>PHP</li>
-                                <li>JavaScript</li>
-                                <li>jQuery</li>
-                                <li>ACF</li>
-                            </ul>
-                        </article>
-                    </div>
-                    <div class="case-info">
-                        <div class="info-cell">
-                            <h3 data-copy="result">Результат</h3>
-                            <p data-copy="c7Result">Aurora Trans работает как child theme поверх axnikitaEngine:
-                                reusable-блоки, калькулятор доставки, формы и tracking. В «Сибирском Доме» я дорабатывал
-                                уже существующую тему: адаптив, JavaScript, видео и SEO-страницы.</p>
-                        </div>
-                        <div class="info-cell">
-                            <h3 data-copy="learned">Что здесь показательно</h3>
-                            <p data-copy="c7Learned">В Aurora Trans собственная базовая тема превратилась в инструмент
-                                для редактора: 27 Block Patterns позволяют собирать страницы из готовых секций. В
-                                «Сибирском Доме» я, наоборот, расширял чужую тему через её ACF-поля, шаблоны и
-                                существующие компоненты без переписывания проекта.</p>
-                        </div>
-                        <div class="info-cell">
-                            <h3 data-copy="focus">Технический фокус</h3>
-                            <p data-copy="c7Focus">Child themes, Block Patterns, ACF, reusable components, внешний
-                                tracking, Rutube/Fancybox и responsive frontend.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section aria-labelledby="web05-title" class="case" id="web05">
-            <div class="page-shell case-inner">
-                <p aria-hidden="true" class="case-no">03</p>
-                <div class="case-main">
-                    <header class="case-head">
-                        <div>
-                            <p class="case-kicker" data-copy="c5Kicker">2025 / коммерческий проект / с нуля</p>
-                            <h2 class="case-title" id="web05-title">MamaMind /<br/><span>Momspace</span></h2>
-                        </div>
-                        <p class="case-lead" data-copy="c5Lead">
-                            Большой WordPress-портал о родительстве и беременности. Основная техническая задача — не
-                            плодить отдельный AJAX под каждый блок, а собрать универсальную динамическую загрузку поверх
-                            server-rendered WordPress.
-                        </p>
-                    </header>
-                    <div class="gallery gallery--2">
-                        <figure class="shot shot--wide">
-                            <button aria-label="Открыть Momspace home"
-                                    data-lightbox="../assets/web/web05_momspace_home.png" type="button">
-                                <img alt="Momspace: главная и категории" decoding="async" height="1152" loading="lazy"
-                                     src="../assets/web/web05_momspace_home.png" width="2048"/>
-                            </button>
-                            <figcaption>Home / categories</figcaption>
-                        </figure>
-                        <figure class="shot shot--wide">
-                            <button aria-label="Открыть Momspace article"
-                                    data-lightbox="../assets/web/web05_momspace_article.png" type="button">
-                                <img alt="Momspace: статья" decoding="async" height="1152" loading="lazy"
-                                     src="../assets/web/web05_momspace_article.png" width="2048"/>
-                            </button>
-                            <figcaption>Article / dynamic content</figcaption>
-                        </figure>
-                    </div>
-                    <div class="case-info">
-                        <div class="info-cell">
-                            <h3 data-copy="details">Реализация</h3>
-                            <p data-copy="c5Details">Тема WordPress с нуля: domLoader заменяет main и переинициализирует
-                                модули; infinite scroll синхронизирует URL. CPT, search, import и SEO.</p>
-                            <ul class="stack">
-                                <li>WordPress</li>
-                                <li>PHP</li>
-                                <li>Vanilla JS</li>
-                                <li>SCSS / CSS</li>
-                                <li>ACF</li>
-                            </ul>
-                        </div>
-                        <div class="info-cell">
-                            <h3 data-copy="result">Результат</h3>
-                            <p data-copy="c5Result">Кастомная WordPress-тема была собрана с нуля и запущена в
-                                production. Навигация, динамические блоки и бесконечная лента используют общий
-                                domLoader, а сервер продолжает отдавать обычные страницы и URL.</p>
-                        </div>
-                        <div class="info-cell">
-                            <h3 data-copy="learned">Что здесь показательно</h3>
-                            <p data-copy="c5Learned">Сделал SPA-подобную навигацию без отдельного frontend-приложения:
-                                WordPress рендерит обычную страницу, а JavaScript заменяет только main и заново
-                                запускает нужные компоненты. В бесконечной ленте URL меняется вместе с текущей статьёй,
-                                сохраняя нормальные ссылки и SEO.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section aria-labelledby="web04-title" class="case case--dark" id="web04">
-            <div class="page-shell case-inner">
-                <p aria-hidden="true" class="case-no">04</p>
-                <div class="case-main">
-                    <header class="case-head">
-                        <div>
-                            <p class="case-kicker" data-copy="c4Kicker">2022—2024 / production / legacy</p>
-                            <h2 class="case-title" id="web04-title">Production legacy<br/><span data-copy="c4Subtitle">Call center / web commerce</span>
-                            </h2>
-                        </div>
-                        <p class="case-lead" data-copy="c4Lead">
-                            Долгая работа внутри одной большой PHP 7.4 кодовой базы. Здесь основной навык был не в том,
-                            чтобы написать всё заново, а в том, чтобы быстро найти нужный контекст и безопасно встроить
-                            изменение.
-                        </p>
-                    </header>
-                    <div aria-label="Схема работы production legacy" class="legacy-map">
-                        <article class="legacy-node">
-                            <strong data-copy="legacy1Title">Internal UI</strong>
-                            <p data-copy="legacy1Text">Страницы call center, калькуляторы, таблицы и служебные
-                                инструменты.</p>
-                            <code>operators / tools</code>
-                        </article>
-                        <article class="legacy-node">
-                            <strong>PHP 7.4</strong>
-                            <p data-copy="legacy2Text">Существующие классы, feature development, bugfix и расширение
-                                legacy-логики.</p>
-                            <code>existing codebase</code>
-                        </article>
-                        <article class="legacy-node">
-                            <strong data-copy="legacy3Title">External API</strong>
-                            <p data-copy="legacy3Text">Интеграции доставки, платежей и внешних сервисов.</p>
-                            <code>delivery / payments</code>
-                        </article>
-                        <article class="legacy-node">
-                            <strong data-copy="legacy4Title">Production</strong>
-                            <p data-copy="legacy4Text">Изменения должны работать рядом с уже существующей
-                                функциональностью.</p>
-                            <code>compatibility</code>
-                        </article>
-                    </div>
-                    <div class="case-info">
-                        <div class="info-cell">
-                            <h3 data-copy="details">Реализация</h3>
-                            <p data-copy="c4Details">Internal tools для call center, калькуляторы, таблицы, платёжные
-                                страницы и API-модули доставки и оплаты.</p>
-                            <ul class="stack">
-                                <li>PHP 7.4</li>
-                                <li>External API</li>
-                                <li>Payments</li>
-                                <li>Delivery</li>
-                            </ul>
-                        </div>
-                        <div class="info-cell">
-                            <h3 data-copy="result">Результат</h3>
-                            <p data-copy="c4Result">За два года в одной PHP 7.4 production-системе я дорабатывал
-                                внутренние инструменты call center, платёжные страницы, модули доставки и оплаты,
-                                расширяя существующие классы вместо переписывания всей кодовой базы.</p>
-                        </div>
-                        <div class="info-cell">
-                            <h3 data-copy="learned">Что здесь показательно</h3>
-                            <p data-copy="c4Learned">Работал со сквозными сценариями внутри живой системы: действие
-                                оператора могло проходить через существующие PHP-классы к API доставки или оплаты и
-                                возвращаться в интерфейс. Это дало опыт безопасно менять production-логику, не изолируя
-                                задачу от соседних зависимостей.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section aria-labelledby="web03-title" class="case" id="web03">
-            <div class="page-shell case-inner">
-                <p aria-hidden="true" class="case-no">05</p>
-                <div class="case-main">
-                    <header class="case-head">
-                        <div>
-                            <p class="case-kicker" data-copy="c3Kicker">2021—2022 / свой проект + библиотеки</p>
-                            <h2 class="case-title" id="web03-title">AxNikita.com<br/><span>→ reusable tooling</span>
-                            </h2>
-                        </div>
-                        <p class="case-lead" data-copy="c3Lead">
-                            Личный сайт с аккаунтами, чатом, отзывами и достижениями постепенно превратился в площадку,
-                            из которой выросли отдельные PHP- и JavaScript-инструменты.
-                        </p>
-                    </header>
-                    <div class="gallery gallery--ax">
-                        <figure class="shot shot--wide">
-                            <button aria-label="Открыть AxNikita home"
-                                    data-lightbox="../assets/web/web03_axnikita_home.png" type="button">
-                                <img alt="AxNikita.com: главная страница" decoding="async" height="1152" loading="lazy"
-                                     src="../assets/web/web03_axnikita_home.png" width="2048"/>
-                            </button>
-                            <figcaption>AxNikita.com / 2021</figcaption>
-                        </figure>
-                        <figure class="shot shot--wide">
-                            <button aria-label="Открыть AxNikita skills"
-                                    data-lightbox="../assets/web/web03_axnikita_skills_correct_v2.png" type="button">
-                                <img alt="AxNikita.com: раздел навыков" decoding="async" height="1152" loading="lazy"
-                                     src="../assets/web/web03_axnikita_skills_correct_v2.png" width="2048"/>
-                            </button>
-                            <figcaption>Dynamic sections</figcaption>
-                        </figure>
-                        <figure class="shot shot--portrait">
-                            <button aria-label="Открыть мобильную версию AxNikita"
-                                    data-lightbox="../assets/web/web03_axnikita_mobile.png" type="button">
-                                <img alt="AxNikita.com: мобильная версия" decoding="async" height="821" loading="lazy"
-                                     src="../assets/web/web03_axnikita_mobile.png" width="385"/>
-                            </button>
-                            <figcaption>Mobile</figcaption>
-                        </figure>
-                    </div>
-                    <div class="case-info">
-                        <div class="info-cell">
-                            <h3 data-copy="details">Реализация</h3>
-                            <p data-copy="c3Details">Регистрация, профили, достижения, отзывы и real-time chat. Из
-                                проекта выросли AxDB/AxWebSocketServer и axNode/axRequest/axLoader.</p>
-                            <ul class="stack">
-                                <li>PHP</li>
-                                <li>JavaScript</li>
-                                <li>MySQL</li>
-                                <li>PDO</li>
-                                <li>WebSocket</li>
-                            </ul>
-                        </div>
-                        <div class="info-cell">
-                            <h3 data-copy="result">Результат</h3>
-                            <p data-copy="c3Result">AxNikita.com включал регистрацию, приглашения, профили, достижения,
-                                отзывы и real-time chat. Повторяющаяся логика постепенно выросла в отдельные PHP/JS
-                                toolkits: AxDB, AxWebSocketServer, axRequest, axLoader и другие модули.</p>
-                        </div>
-                        <div class="info-cell">
-                            <h3 data-copy="learned">Что здесь показательно</h3>
-                            <p data-copy="c3Learned">В AxNikita сделал собственный слой динамического интерфейса:
-                                атрибуты в HTML задавали, что и когда загружать, а общий JavaScript выполнял запрос,
-                                кешировал результат, обновлял history и переинициализировал вставленные модули. Позже
-                                этот подход вырос в reusable axLoader и связанные библиотеки.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section aria-labelledby="web02-title" class="case case--dark" id="web02">
-            <div class="page-shell case-inner">
-                <p aria-hidden="true" class="case-no">06</p>
-                <div class="case-main">
-                    <header class="case-head">
-                        <div>
-                            <p class="case-kicker" data-copy="c2Kicker">2020—2022 / коммерческая разработка</p>
-                            <h2 class="case-title" id="web02-title">Freelance<br/><span>Development</span></h2>
-                        </div>
-                        <p class="case-lead" data-copy="c2Lead">
-                            Первый коммерческий период: небольшие сайты и продукты на Kwork и напрямую. Здесь появились
-                            real-time, пользовательские данные, WordPress и регулярная работа по требованиям заказчика.
-                        </p>
-                    </header>
-                    <div class="gallery gallery--3">
-                        <figure class="shot shot--wide">
-                            <button aria-label="Открыть скриншот messenger"
-                                    data-lightbox="../assets/web/web02_messenger.png" type="button">
-                                <img alt="Браузерный messenger с диалогами, файлами и статусами прочтения"
-                                     decoding="async" height="634" loading="lazy"
-                                     src="../assets/web/web02_messenger.png" width="1400"/>
-                            </button>
-                            <figcaption>Messenger / WebSocket</figcaption>
-                        </figure>
-                        <figure class="shot shot--wide">
-                            <button aria-label="Открыть игровой инвентарь"
-                                    data-lightbox="../assets/web/web02_game_inventory.png" type="button">
-                                <img alt="Инвентарь социальной платформы для игроков" decoding="async" height="636"
-                                     loading="lazy" src="../assets/web/web02_game_inventory.png" width="1400"/>
-                            </button>
-                            <figcaption>Game community</figcaption>
-                        </figure>
-                        <figure class="shot shot--wide">
-                            <button aria-label="Открыть сайт ювелирного магазина"
-                                    data-lightbox="../assets/web/web02_alexandr_ven.png" type="button">
-                                <img alt="WordPress-сайт ювелирного магазина Aleksandr Ven" decoding="async"
-                                     height="799" loading="lazy" src="../assets/web/web02_alexandr_ven.png"
-                                     width="1400"/>
-                            </button>
-                            <figcaption>WordPress / retail</figcaption>
-                        </figure>
-                    </div>
-                    <div class="case-info">
-                        <div class="info-cell">
-                            <h3 data-copy="details">Реализация</h3>
-                            <p data-copy="c2Details">WebSocket-messenger с диалогами, файлами, read status и
-                                online-state; игровая платформа с инвентарём и обменом; WordPress-сайт целиком.</p>
-                            <ul class="stack">
-                                <li>PHP</li>
-                                <li>JavaScript</li>
-                                <li>MySQL</li>
-                                <li>WordPress</li>
-                                <li>WebSocket</li>
-                            </ul>
-                        </div>
-                        <div class="info-cell">
-                            <h3 data-copy="result">Результат</h3>
-                            <p data-copy="c2Result">За этот период были сделаны разные типы коммерческих систем:
-                                браузерный messenger, социальная платформа для игроков с инвентарём и обменом, турнирные
-                                сетки и полный WordPress-сайт ювелирного магазина.</p>
-                        </div>
-                        <div class="info-cell">
-                            <h3 data-copy="learned">Что здесь показательно</h3>
-                            <p data-copy="c2Learned">Самостоятельно реализовал WebSocket-мессенджер без готовой
-                                realtime-библиотеки: постоянное соединение обслуживало диалоги, историю, файлы, read
-                                status и online-state. Это был первый проект, где backend должен был поддерживать общее
-                                состояние нескольких клиентов в реальном времени.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section aria-labelledby="web01-title" class="case" id="web01">
-            <div class="page-shell case-inner">
-                <p aria-hidden="true" class="case-no">07</p>
-                <div class="case-main">
-                    <header class="case-head">
-                        <div>
-                            <p class="case-kicker" data-copy="c1Kicker">2019 / учебный проект / solo</p>
-                            <h2 class="case-title" id="web01-title">BorisMinimal /<br/><span>Guitar Songbook</span></h2>
-                        </div>
-                        <p class="case-lead" data-copy="c1Lead">
-                            Первый законченный WEB-проект: интерактивный песенник для гитары. PHP собирал контент из
-                            файлов, JavaScript отвечал за поиск, аккорды, темы и управление чтением.
-                        </p>
-                    </header>
-                    <div class="gallery gallery--2">
-                        <figure class="shot shot--wide">
-                            <button aria-label="Открыть светлую тему Guitar Songbook"
-                                    data-lightbox="../assets/web/web01_songbook_light.png" type="button">
-                                <img alt="Guitar Songbook: светлая тема, текст песни и аппликатуры аккордов"
-                                     decoding="async" height="1152" loading="eager"
-                                     src="../assets/web/web01_songbook_light.png" width="2048"/>
-                            </button>
-                            <figcaption>Light theme / chords</figcaption>
-                        </figure>
-                        <figure class="shot shot--wide">
-                            <button aria-label="Открыть неоновую тему Guitar Songbook"
-                                    data-lightbox="../assets/web/web01_songbook_neon.png" type="button">
-                                <img alt="Guitar Songbook: неоновая тема" decoding="async" height="1152" loading="eager"
-                                     src="../assets/web/web01_songbook_neon.png" width="2048"/>
-                            </button>
-                            <figcaption>Theme system</figcaption>
-                        </figure>
-                    </div>
-                    <div class="case-info">
-                        <div class="info-cell">
-                            <h3 data-copy="details">Реализация</h3>
-                            <p data-copy="c1Details">PHP собирал исполнителей, песни и темы из файлов. Regex находил
-                                аккорды, JS рисовал аппликатуры, поиск и автопрокрутку.</p>
-                            <ul class="stack">
-                                <li>PHP 7.4</li>
-                                <li>Vanilla JS</li>
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>Apache</li>
-                            </ul>
-                        </div>
-                        <div class="info-cell">
-                            <h3 data-copy="result">Результат</h3>
-                            <p data-copy="c1Result">В приложении было 132 песни, 19 исполнителей, 27 описаний аккордов и
-                                10 тем. Добавление новой песни не требовало менять HTML или JavaScript: PHP сам находил
-                                контент в файловой структуре.</p>
-                        </div>
-                        <div class="info-cell">
-                            <h3 data-copy="learned">Что здесь показательно</h3>
-                            <p data-copy="c1Learned">Песни, исполнители и темы хранились в файлах, а PHP автоматически
-                                строил из этой структуры интерфейс — без отдельной БД и ручного добавления страниц.
-                                JavaScript поверх текста находил аккорды и показывал только нужные аппликатуры для
-                                выбранной песни.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="site-footer" id="contact">
-        <div class="footer-inner">
-            <div class="footer-grid">
-                <div>
-                    <p class="footer-eyebrow" data-copy="footerEyebrow">Контакты / работа</p>
-                    <h2 data-copy="footerTitle">Проект или вакансия?<span>Обсудим.</span></h2>
-                </div>
-                <div class="footer-contact">
-                    <p data-copy="footerText">Если нужен PHP/WordPress/JavaScript-разработчик — отправьте задачу,
-                        текущий стек или описание роли.</p>
-                    <div class="contact-links">
-                        <a href="https://kwork.ru/user/axnikita" rel="noopener noreferrer" target="_blank">Kwork ↗</a>
-                        <a href="https://github.com/ax-nikita" rel="noopener noreferrer" target="_blank">GitHub ↗</a>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>© 2026 Zonov Nikita / axnikita</span>
-                <span>WEB PORTFOLIO / V1.9</span>
-            </div>
-        </div>
-    </footer>
+<body data-page="web">
+  <a class="skip-link" data-lang-ru="Перейти к содержимому" data-lang-en="Skip to content" href="#main">Перейти к содержимому</a>
+  <div class="site-shell">
+    <div class="template-slot template-slot--header" domLoader="../templates/header.html" requestWeight="0.5"></div>
+    <main id="main" data-page-key="web" data-page-title="Zonov Nikita / axnikita - WEB Portfolio" data-page-description="WEB portfolio cases by Zonov Nikita: PHP, JavaScript, WordPress, REST API, production support and commercial full-stack development." data-role-ru="Full-stack WEB developer · PHP / JavaScript / WordPress" data-role-en="Full-stack WEB developer · PHP / JavaScript / WordPress" data-footer-eyebrow-ru="Контакты / работа" data-footer-eyebrow-en="Contact / work" data-footer-title-ru="Проект или вакансия?&lt;span&gt;Обсудим.&lt;/span&gt;" data-footer-title-en="Project or role?&lt;span&gt;Let’s talk.&lt;/span&gt;" data-footer-text-ru="Если нужен PHP/WordPress/JavaScript-разработчик — отправьте задачу, текущий стек или описание роли." data-footer-text-en="If you need a PHP / WordPress / JavaScript developer, send the task, current stack or role description." data-footer-version="WEB PORTFOLIO / V1.9">
+<section aria-labelledby="web-title" class="web-hero" id="web-top">
+<div class="page-shell">
+<div class="hero-grid">
+<p aria-hidden="true" class="hero-index">WEB</p>
+<div>
+<p class="eyebrow" data-copy="heroEyebrow">Портфолио / 2019—2026</p>
+<h1 id="web-title">WEB PROJECTS.<span data-copy="heroTitleAccent">PHP / JavaScript / WordPress.</span></h1>
 </div>
-<dialog aria-label="Просмотр изображения" class="lightbox" id="lightbox">
+<div class="hero-copy">
+<div aria-label="Кратко о WEB-портфолио" class="hero-snapshot">
+<div class="hero-snapshot-main">
+<strong>07</strong>
+<span data-copy="snapshotCases">кейсов</span>
+</div>
+<div class="hero-snapshot-row">
+<span data-copy="snapshotCommercial">Коммерческий WEB-опыт</span>
+<strong>2020—2026</strong>
+</div>
+<div class="hero-snapshot-row">
+<span data-copy="snapshotCore">Основной стек</span>
+<strong>PHP · JS · WP</strong>
+</div>
+</div>
+<p data-copy="heroText">
+  Коммерческие сайты, WordPress-платформы, production и legacy. Сначала — актуальные проекты, ниже — ранние работы и развитие собственного стека.
+</p>
+<ul class="hero-meta">
+<li>axnikita / Zonov Nikita</li>
+<li>Full-stack WEB</li>
+<li data-copy="snapshotOrder">Актуальные сначала</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<nav aria-label="Навигация по WEB-кейсам" class="case-index">
+<div class="page-shell">
+<ol class="case-index-list"><li><a aria-label="01. MPRUS" href="#web06"><span>01</span><span>MPRUS</span></a></li><li><a aria-label="02. Aurora / СибДом" href="#web07"><span>02</span><span>Aurora / СибДом</span></a></li><li><a aria-label="03. Momspace" href="#web05"><span>03</span><span>Momspace</span></a></li><li><a aria-label="04. Legacy / commerce" href="#web04"><span>04</span><span>Legacy / commerce</span></a></li><li><a aria-label="05. AxNikita.com" href="#web03"><span>05</span><span>AxNikita.com</span></a></li><li><a aria-label="06. Freelance" href="#web02"><span>06</span><span>Freelance</span></a></li><li><a aria-label="07. Songbook" href="#web01"><span>07</span><span>Songbook</span></a></li></ol>
+</div>
+<div aria-hidden="true" class="case-rail-thumb">
+<span class="case-rail-dot"></span>
+</div>
+<div aria-hidden="true" class="case-rail-fixed-label">MPRUS</div>
+<div aria-hidden="true" class="case-rail-fixed-count">01/07</div>
+</nav><section aria-labelledby="web06-title" class="case case--featured" id="web06">
+<div class="page-shell case-inner">
+<p aria-hidden="true" class="case-no">01</p>
+<div class="case-main">
+<header class="case-head">
+<div>
+<p class="case-kicker" data-copy="c6Kicker">2025—2026 / платформа для селлеров / full-stack</p>
+<h2 class="case-title" id="web06-title">MPRUS<br/><span data-copy="c6Subtitle">Платформа для селлеров маркетплейсов</span></h2>
+</div>
+<p class="case-lead" data-copy="c6Lead">
+              Информационная и социальная платформа для селлеров маркетплейсов. Здесь знакомые механики из Momspace были переработаны в более строгую структуру: API, сервисы, обобщённые loaders и отдельные подсистемы.
+            </p>
+</header>
+<div class="gallery gallery--2">
+<figure class="shot shot--wide">
+<button aria-label="Открыть MPRUS feed" data-lightbox="../assets/images/web/web06_mprus_feed.png" type="button">
+<img alt="MPRUS: лента публикаций" decoding="async" height="1152" loading="lazy" src="../assets/images/web/web06_mprus_feed.png" width="2048"/>
+</button>
+<figcaption>Feed / social</figcaption>
+</figure>
+<figure class="shot shot--wide">
+<button aria-label="Открыть MPRUS ratings" data-lightbox="../assets/images/web/web06_mprus_ratings.png" type="button">
+<img alt="MPRUS: рейтинги компаний и пользователей" decoding="async" height="1152" loading="lazy" src="../assets/images/web/web06_mprus_ratings.png" width="2048"/>
+</button>
+<figcaption>Ratings / users</figcaption>
+</figure>
+</div>
+<div class="case-info">
+<div class="info-cell">
+<h3 data-copy="details">Реализация</h3>
+<p data-copy="c6Details">Свой API dispatcher, nonce и weighted rate limiter. InfiniteLoader разделён на Loader / Controller / Service и работает с Post/User/Term/Comment.</p>
+<ul class="stack"><li>PHP</li><li>WordPress</li><li>JavaScript</li><li>MySQL</li><li>WP Object Cache</li></ul>
+</div>
+<div class="info-cell">
+<h3 data-copy="result">Результат</h3>
+<p data-copy="c6Result">Собрана рабочая основа портала: лента и новости, профили, рейтинги компаний и пользователей, реакции, закладки, подписки, уведомления и API. Эти функции используют общую инфраструктуру сервисов и загрузки.</p>
+</div>
+<div class="info-cell">
+<h3 data-copy="learned">Что здесь показательно</h3>
+<p data-copy="c6Learned">Сделал одну систему подгрузки для постов, пользователей, рубрик и комментариев вместо отдельных AJAX-решений. Она сохраняет фильтры, продолжает выдачу с нужного места и возвращает готовый серверный HTML — поэтому infinite scroll, фильтрация и SSR работают через один механизм.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section aria-labelledby="web07-title" class="case" id="web07">
+<div class="page-shell case-inner">
+<p aria-hidden="true" class="case-no">02</p>
+<div class="case-main">
+<header class="case-head">
+<div>
+<p class="case-kicker" data-copy="c7Kicker">2025—2026 / другие коммерческие проекты</p>
+<h2 class="case-title" id="web07-title">Aurora Trans +<br/><span>Сибирский Дом</span></h2>
+</div>
+<p class="case-lead" data-copy="c7Lead">
+              Два противоположных сценария: в Aurora Trans — развитие собственной базовой WordPress-темы через child theme; в «Сибирском Доме» — работа внутри уже существующей чужой кодовой базы.
+            </p>
+</header>
+<div class="other-grid">
+<article class="subcase">
+<header class="subcase-head">
+<h3>Aurora Trans</h3>
+<span>2025 / WordPress</span>
+</header>
+<p data-copy="auroraText">
+                Child theme поверх axnikitaEngine: 27 reusable Block Patterns, SPA-подобная навигация, калькулятор доставки, формы, новости и интеграция с внешней системой отслеживания грузов.
+              </p>
+<figure class="shot shot--wide">
+<button aria-label="Открыть Aurora Trans" data-lightbox="../assets/images/web/web07_aurora_home.png" type="button">
+<img alt="Aurora Trans: главная страница" decoding="async" height="1152" loading="lazy" src="../assets/images/web/web07_aurora_home.png" width="2048"/>
+</button>
+</figure>
+<ul class="stack"><li>WordPress</li><li>PHP</li><li>JavaScript</li><li>SCSS / CSS</li><li>jQuery</li></ul>
+</article>
+<article class="subcase">
+<header class="subcase-head">
+<h3>Сибирский Дом</h3>
+<span>2026 / existing codebase</span>
+</header>
+<p data-copy="sibirskyText">
+                Подключился к существующей WordPress-теме: адаптив, JavaScript-сценарии, Rutube/Fancybox, дополнительные блоки и страницы, повторное использование существующих компонентов и SEO landing template.
+              </p>
+<div class="gallery gallery--2">
+<figure class="shot shot--wide">
+<button aria-label="Открыть каталог Сибирский Дом" data-lightbox="../assets/images/web/web07_sibirsky_catalog.png" type="button">
+<img alt="Сибирский Дом: каталог проектов" decoding="async" height="1152" loading="lazy" src="../assets/images/web/web07_sibirsky_catalog.png" width="2048"/>
+</button>
+</figure>
+<figure class="shot shot--wide">
+<button aria-label="Открыть главную Сибирский Дом" data-lightbox="../assets/images/web/web07_sibirsky_home.png" type="button">
+<img alt="Сибирский Дом: главная страница" decoding="async" height="1152" loading="lazy" src="../assets/images/web/web07_sibirsky_home.png" width="2048"/>
+</button>
+</figure>
+</div>
+<ul class="stack"><li>WordPress</li><li>PHP</li><li>JavaScript</li><li>jQuery</li><li>ACF</li></ul>
+</article>
+</div>
+<div class="case-info">
+<div class="info-cell">
+<h3 data-copy="result">Результат</h3>
+<p data-copy="c7Result">Aurora Trans работает как child theme поверх axnikitaEngine: reusable-блоки, калькулятор доставки, формы и tracking. В «Сибирском Доме» я дорабатывал уже существующую тему: адаптив, JavaScript, видео и SEO-страницы.</p>
+</div>
+<div class="info-cell">
+<h3 data-copy="learned">Что здесь показательно</h3>
+<p data-copy="c7Learned">В Aurora Trans собственная базовая тема превратилась в инструмент для редактора: 27 Block Patterns позволяют собирать страницы из готовых секций. В «Сибирском Доме» я, наоборот, расширял чужую тему через её ACF-поля, шаблоны и существующие компоненты без переписывания проекта.</p>
+</div>
+<div class="info-cell">
+<h3 data-copy="focus">Технический фокус</h3>
+<p data-copy="c7Focus">Child themes, Block Patterns, ACF, reusable components, внешний tracking, Rutube/Fancybox и responsive frontend.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section aria-labelledby="web05-title" class="case" id="web05">
+<div class="page-shell case-inner">
+<p aria-hidden="true" class="case-no">03</p>
+<div class="case-main">
+<header class="case-head">
+<div>
+<p class="case-kicker" data-copy="c5Kicker">2025 / коммерческий проект / с нуля</p>
+<h2 class="case-title" id="web05-title">MamaMind /<br/><span>Momspace</span></h2>
+</div>
+<p class="case-lead" data-copy="c5Lead">
+              Большой WordPress-портал о родительстве и беременности. Основная техническая задача — не плодить отдельный AJAX под каждый блок, а собрать универсальную динамическую загрузку поверх server-rendered WordPress.
+            </p>
+</header>
+<div class="gallery gallery--2">
+<figure class="shot shot--wide">
+<button aria-label="Открыть Momspace home" data-lightbox="../assets/images/web/web05_momspace_home.png" type="button">
+<img alt="Momspace: главная и категории" decoding="async" height="1152" loading="lazy" src="../assets/images/web/web05_momspace_home.png" width="2048"/>
+</button>
+<figcaption>Home / categories</figcaption>
+</figure>
+<figure class="shot shot--wide">
+<button aria-label="Открыть Momspace article" data-lightbox="../assets/images/web/web05_momspace_article.png" type="button">
+<img alt="Momspace: статья" decoding="async" height="1152" loading="lazy" src="../assets/images/web/web05_momspace_article.png" width="2048"/>
+</button>
+<figcaption>Article / dynamic content</figcaption>
+</figure>
+</div>
+<div class="case-info">
+<div class="info-cell">
+<h3 data-copy="details">Реализация</h3>
+<p data-copy="c5Details">Тема WordPress с нуля: domLoader заменяет main и переинициализирует модули; infinite scroll синхронизирует URL. CPT, search, import и SEO.</p>
+<ul class="stack"><li>WordPress</li><li>PHP</li><li>Vanilla JS</li><li>SCSS / CSS</li><li>ACF</li></ul>
+</div>
+<div class="info-cell">
+<h3 data-copy="result">Результат</h3>
+<p data-copy="c5Result">Кастомная WordPress-тема была собрана с нуля и запущена в production. Навигация, динамические блоки и бесконечная лента используют общий domLoader, а сервер продолжает отдавать обычные страницы и URL.</p>
+</div>
+<div class="info-cell">
+<h3 data-copy="learned">Что здесь показательно</h3>
+<p data-copy="c5Learned">Сделал SPA-подобную навигацию без отдельного frontend-приложения: WordPress рендерит обычную страницу, а JavaScript заменяет только main и заново запускает нужные компоненты. В бесконечной ленте URL меняется вместе с текущей статьёй, сохраняя нормальные ссылки и SEO.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section aria-labelledby="web04-title" class="case case--dark" id="web04">
+<div class="page-shell case-inner">
+<p aria-hidden="true" class="case-no">04</p>
+<div class="case-main">
+<header class="case-head">
+<div>
+<p class="case-kicker" data-copy="c4Kicker">2022—2024 / production / legacy</p>
+<h2 class="case-title" id="web04-title">Production legacy<br/><span data-copy="c4Subtitle">Call center / web commerce</span></h2>
+</div>
+<p class="case-lead" data-copy="c4Lead">
+              Долгая работа внутри одной большой PHP 7.4 кодовой базы. Здесь основной навык был не в том, чтобы написать всё заново, а в том, чтобы быстро найти нужный контекст и безопасно встроить изменение.
+            </p>
+</header>
+<div aria-label="Схема работы production legacy" class="legacy-map">
+<article class="legacy-node">
+<strong data-copy="legacy1Title">Internal UI</strong>
+<p data-copy="legacy1Text">Страницы call center, калькуляторы, таблицы и служебные инструменты.</p>
+<code>operators / tools</code>
+</article>
+<article class="legacy-node">
+<strong>PHP 7.4</strong>
+<p data-copy="legacy2Text">Существующие классы, feature development, bugfix и расширение legacy-логики.</p>
+<code>existing codebase</code>
+</article>
+<article class="legacy-node">
+<strong data-copy="legacy3Title">External API</strong>
+<p data-copy="legacy3Text">Интеграции доставки, платежей и внешних сервисов.</p>
+<code>delivery / payments</code>
+</article>
+<article class="legacy-node">
+<strong data-copy="legacy4Title">Production</strong>
+<p data-copy="legacy4Text">Изменения должны работать рядом с уже существующей функциональностью.</p>
+<code>compatibility</code>
+</article>
+</div>
+<div class="case-info">
+<div class="info-cell">
+<h3 data-copy="details">Реализация</h3>
+<p data-copy="c4Details">Internal tools для call center, калькуляторы, таблицы, платёжные страницы и API-модули доставки и оплаты.</p>
+<ul class="stack"><li>PHP 7.4</li><li>External API</li><li>Payments</li><li>Delivery</li></ul>
+</div>
+<div class="info-cell">
+<h3 data-copy="result">Результат</h3>
+<p data-copy="c4Result">За два года в одной PHP 7.4 production-системе я дорабатывал внутренние инструменты call center, платёжные страницы, модули доставки и оплаты, расширяя существующие классы вместо переписывания всей кодовой базы.</p>
+</div>
+<div class="info-cell">
+<h3 data-copy="learned">Что здесь показательно</h3>
+<p data-copy="c4Learned">Работал со сквозными сценариями внутри живой системы: действие оператора могло проходить через существующие PHP-классы к API доставки или оплаты и возвращаться в интерфейс. Это дало опыт безопасно менять production-логику, не изолируя задачу от соседних зависимостей.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section aria-labelledby="web03-title" class="case" id="web03">
+<div class="page-shell case-inner">
+<p aria-hidden="true" class="case-no">05</p>
+<div class="case-main">
+<header class="case-head">
+<div>
+<p class="case-kicker" data-copy="c3Kicker">2021—2022 / свой проект + библиотеки</p>
+<h2 class="case-title" id="web03-title">AxNikita.com<br/><span>→ reusable tooling</span></h2>
+</div>
+<p class="case-lead" data-copy="c3Lead">
+              Личный сайт с аккаунтами, чатом, отзывами и достижениями постепенно превратился в площадку, из которой выросли отдельные PHP- и JavaScript-инструменты.
+            </p>
+</header>
+<div class="gallery gallery--ax">
+<figure class="shot shot--wide">
+<button aria-label="Открыть AxNikita home" data-lightbox="../assets/images/web/web03_axnikita_home.png" type="button">
+<img alt="AxNikita.com: главная страница" decoding="async" height="1152" loading="lazy" src="../assets/images/web/web03_axnikita_home.png" width="2048"/>
+</button>
+<figcaption>AxNikita.com / 2021</figcaption>
+</figure>
+<figure class="shot shot--wide">
+<button aria-label="Открыть AxNikita skills" data-lightbox="../assets/images/web/web03_axnikita_skills_correct_v2.png" type="button">
+<img alt="AxNikita.com: раздел навыков" decoding="async" height="1152" loading="lazy" src="../assets/images/web/web03_axnikita_skills_correct_v2.png" width="2048"/>
+</button>
+<figcaption>Dynamic sections</figcaption>
+</figure>
+<figure class="shot shot--portrait">
+<button aria-label="Открыть мобильную версию AxNikita" data-lightbox="../assets/images/web/web03_axnikita_mobile.png" type="button">
+<img alt="AxNikita.com: мобильная версия" decoding="async" height="821" loading="lazy" src="../assets/images/web/web03_axnikita_mobile.png" width="385"/>
+</button>
+<figcaption>Mobile</figcaption>
+</figure>
+</div>
+<div class="case-info">
+<div class="info-cell">
+<h3 data-copy="details">Реализация</h3>
+<p data-copy="c3Details">Регистрация, профили, достижения, отзывы и real-time chat. Из проекта выросли AxDB/AxWebSocketServer и axNode/axRequest/axLoader.</p>
+<ul class="stack"><li>PHP</li><li>JavaScript</li><li>MySQL</li><li>PDO</li><li>WebSocket</li></ul>
+</div>
+<div class="info-cell">
+<h3 data-copy="result">Результат</h3>
+<p data-copy="c3Result">AxNikita.com включал регистрацию, приглашения, профили, достижения, отзывы и real-time chat. Повторяющаяся логика постепенно выросла в отдельные PHP/JS toolkits: AxDB, AxWebSocketServer, axRequest, axLoader и другие модули.</p>
+</div>
+<div class="info-cell">
+<h3 data-copy="learned">Что здесь показательно</h3>
+<p data-copy="c3Learned">В AxNikita сделал собственный слой динамического интерфейса: атрибуты в HTML задавали, что и когда загружать, а общий JavaScript выполнял запрос, кешировал результат, обновлял history и переинициализировал вставленные модули. Позже этот подход вырос в reusable axLoader и связанные библиотеки.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section aria-labelledby="web02-title" class="case case--dark" id="web02">
+<div class="page-shell case-inner">
+<p aria-hidden="true" class="case-no">06</p>
+<div class="case-main">
+<header class="case-head">
+<div>
+<p class="case-kicker" data-copy="c2Kicker">2020—2022 / коммерческая разработка</p>
+<h2 class="case-title" id="web02-title">Freelance<br/><span>Development</span></h2>
+</div>
+<p class="case-lead" data-copy="c2Lead">
+              Первый коммерческий период: небольшие сайты и продукты на Kwork и напрямую. Здесь появились real-time, пользовательские данные, WordPress и регулярная работа по требованиям заказчика.
+            </p>
+</header>
+<div class="gallery gallery--3">
+<figure class="shot shot--wide">
+<button aria-label="Открыть скриншот messenger" data-lightbox="../assets/images/web/web02_messenger.png" type="button">
+<img alt="Браузерный messenger с диалогами, файлами и статусами прочтения" decoding="async" height="634" loading="lazy" src="../assets/images/web/web02_messenger.png" width="1400"/>
+</button>
+<figcaption>Messenger / WebSocket</figcaption>
+</figure>
+<figure class="shot shot--wide">
+<button aria-label="Открыть игровой инвентарь" data-lightbox="../assets/images/web/web02_game_inventory.png" type="button">
+<img alt="Инвентарь социальной платформы для игроков" decoding="async" height="636" loading="lazy" src="../assets/images/web/web02_game_inventory.png" width="1400"/>
+</button>
+<figcaption>Game community</figcaption>
+</figure>
+<figure class="shot shot--wide">
+<button aria-label="Открыть сайт ювелирного магазина" data-lightbox="../assets/images/web/web02_alexandr_ven.png" type="button">
+<img alt="WordPress-сайт ювелирного магазина Aleksandr Ven" decoding="async" height="799" loading="lazy" src="../assets/images/web/web02_alexandr_ven.png" width="1400"/>
+</button>
+<figcaption>WordPress / retail</figcaption>
+</figure>
+</div>
+<div class="case-info">
+<div class="info-cell">
+<h3 data-copy="details">Реализация</h3>
+<p data-copy="c2Details">WebSocket-messenger с диалогами, файлами, read status и online-state; игровая платформа с инвентарём и обменом; WordPress-сайт целиком.</p>
+<ul class="stack"><li>PHP</li><li>JavaScript</li><li>MySQL</li><li>WordPress</li><li>WebSocket</li></ul>
+</div>
+<div class="info-cell">
+<h3 data-copy="result">Результат</h3>
+<p data-copy="c2Result">За этот период были сделаны разные типы коммерческих систем: браузерный messenger, социальная платформа для игроков с инвентарём и обменом, турнирные сетки и полный WordPress-сайт ювелирного магазина.</p>
+</div>
+<div class="info-cell">
+<h3 data-copy="learned">Что здесь показательно</h3>
+<p data-copy="c2Learned">Самостоятельно реализовал WebSocket-мессенджер без готовой realtime-библиотеки: постоянное соединение обслуживало диалоги, историю, файлы, read status и online-state. Это был первый проект, где backend должен был поддерживать общее состояние нескольких клиентов в реальном времени.</p>
+</div>
+</div>
+</div>
+</div>
+</section><section aria-labelledby="web01-title" class="case" id="web01">
+<div class="page-shell case-inner">
+<p aria-hidden="true" class="case-no">07</p>
+<div class="case-main">
+<header class="case-head">
+<div>
+<p class="case-kicker" data-copy="c1Kicker">2019 / учебный проект / solo</p>
+<h2 class="case-title" id="web01-title">BorisMinimal /<br/><span>Guitar Songbook</span></h2>
+</div>
+<p class="case-lead" data-copy="c1Lead">
+              Первый законченный WEB-проект: интерактивный песенник для гитары. PHP собирал контент из файлов, JavaScript отвечал за поиск, аккорды, темы и управление чтением.
+            </p>
+</header>
+<div class="gallery gallery--2">
+<figure class="shot shot--wide">
+<button aria-label="Открыть светлую тему Guitar Songbook" data-lightbox="../assets/images/web/web01_songbook_light.png" type="button">
+<img alt="Guitar Songbook: светлая тема, текст песни и аппликатуры аккордов" decoding="async" height="1152" loading="eager" src="../assets/images/web/web01_songbook_light.png" width="2048"/>
+</button>
+<figcaption>Light theme / chords</figcaption>
+</figure>
+<figure class="shot shot--wide">
+<button aria-label="Открыть неоновую тему Guitar Songbook" data-lightbox="../assets/images/web/web01_songbook_neon.png" type="button">
+<img alt="Guitar Songbook: неоновая тема" decoding="async" height="1152" loading="eager" src="../assets/images/web/web01_songbook_neon.png" width="2048"/>
+</button>
+<figcaption>Theme system</figcaption>
+</figure>
+</div>
+<div class="case-info">
+<div class="info-cell">
+<h3 data-copy="details">Реализация</h3>
+<p data-copy="c1Details">PHP собирал исполнителей, песни и темы из файлов. Regex находил аккорды, JS рисовал аппликатуры, поиск и автопрокрутку.</p>
+<ul class="stack"><li>PHP 7.4</li><li>Vanilla JS</li><li>HTML</li><li>CSS</li><li>Apache</li></ul>
+</div>
+<div class="info-cell">
+<h3 data-copy="result">Результат</h3>
+<p data-copy="c1Result">В приложении было 132 песни, 19 исполнителей, 27 описаний аккордов и 10 тем. Добавление новой песни не требовало менять HTML или JavaScript: PHP сам находил контент в файловой структуре.</p>
+</div>
+<div class="info-cell">
+<h3 data-copy="learned">Что здесь показательно</h3>
+<p data-copy="c1Learned">Песни, исполнители и темы хранились в файлах, а PHP автоматически строил из этой структуры интерфейс — без отдельной БД и ручного добавления страниц. JavaScript поверх текста находил аккорды и показывал только нужные аппликатуры для выбранной песни.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+    <div class="template-slot template-slot--footer" domLoader="../templates/footer.html" requestWeight="0.5"></div>
+  </div>
+  <dialog aria-label="Просмотр изображения" class="lightbox" id="lightbox">
     <div class="lightbox-inner">
-        <button aria-label="Закрыть" class="lightbox-close" type="button">×</button>
-        <img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="/>
+      <button aria-label="Закрыть" class="lightbox-close" data-lightbox-close type="button">×</button>
+      <img alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="/>
     </div>
-</dialog>
-
-<script src="../assets/js/axnikitaJS.js" defer></script>
-<script src="../assets/js/site-runtime.js" defer></script>
-<script src="../assets/js/web.js" defer></script>
+  </dialog>
 </body>
 </html>

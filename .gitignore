@@ -1,11 +1,11 @@
 baza/
-tools/
 node_modules/
 dist/
-/assets/
-/web/
-/gamedev/
-/index.html
 server-4173*.log
 .DS_Store
+.git
+.astro
+.agents
+.github
+.idea
 Thumbs.db
