@@ -32,6 +32,8 @@ class PortfolioApp {
 
     const pageKey = main.dataset.pageKey;
 
+    console.dir(pageKey);
+
     // The CSS bundle is already loaded. Switching data-page activates the
     // corresponding scoped rules synchronously, without another CSS request.
     syncShell(this.language);
