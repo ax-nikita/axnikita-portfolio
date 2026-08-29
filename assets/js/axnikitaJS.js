@@ -464,7 +464,7 @@ axComponentLoader.appendFunction(AX_LOADER_ATTR_EL, (el) => {
         if (typeof(timeout) !== 'number') {
             timeout = 0;
         }
-        
+
         setTimeout(() => {
             window.addEventListener("scroll", f1000);
             document.addEventListener("end_load_spa", f1000);
@@ -490,33 +490,43 @@ axComponentLoader.appendFunction(AX_LOADER_ATTR_EL, (el) => {
 axComponentLoader.appendFunction(AX_LOADER_ATTR_SPA, (el) => {
     el.addEventListener('click', function (e) {
         e.preventDefault();
-        let
-            href = this.getAttribute('href');
+
+        const href = this.getAttribute('href');
 
         if (href == '#') {
             return false;
-        };
+        }
 
-        let
-            url = new axURL(href, {save_history: true}),
-            old_url = window.location.href;
+        const oldUrl = window.location.href;
+        const url = new axURL(href, {
+            save_history: true
+        });
 
         url.update();
-
         url.addGetParam(AX_LOADER_ATTR_EL);
 
-        let
-            newMain = new axLoader(url.urlPath, {weight: 4});
+        const newMain = new axLoader(url.urlPath, {
+            weight: 4
+        });
 
-        //newMain.setSelector('title');
-        //axQS('title').replaceWith(newMain.content);
         newMain.setSelector('main');
+
+        newMain.addLeadUpFunction(() => {
+            queueMicrotask(() => {
+                document.dispatchEvent(
+                    new CustomEvent('end_load_spa', {
+                        detail: {
+                            oldUrl,
+                            url: window.location.href
+                        }
+                    })
+                );
+
+                document.documentElement.scrollTop = 0;
+            });
+        });
+
         axQS('main').replaceWith(newMain.content);
-
-        let event = new CustomEvent("end_load_spa", {old_url: old_url}); // (2)
-        document.dispatchEvent(event);
-
-        document.documentElement.scrollTop = 0
     });
 });
 
