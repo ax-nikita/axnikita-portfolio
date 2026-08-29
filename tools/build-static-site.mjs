@@ -2,8 +2,6 @@ import { copyFile, cp, mkdir, rm, writeFile } from "node:fs/promises";
 import { join, sep } from "node:path";
 import * as sass from "sass";
 
-await import("./generate-static-site.mjs");
-
 const root = process.cwd();
 const result = sass.compile(join(root, "assets", "scss", "main.scss"), {
   style: "expanded",

@@ -88,36 +88,6 @@ body[data-page="gamedev"] {
       line-height: 1.58;
     }
 
-    .case-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-      margin-top: 14px;
-    }
-
-    .case-links a {
-      display: inline-flex;
-      align-items: center;
-      min-height: 32px;
-      padding: 6px 8px;
-      border: 1px solid var(--line);
-      font-size: .56rem;
-      font-weight: 800;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-    }
-
-    .case--dark .case-links a,
-    .case--featured .case-links a {
-      border-color: #484843;
-      color: #d0ccc5;
-    }
-
-    .case-links a:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-    }
-
     .mod-grid {
       display: grid;
       grid-template-columns: repeat(4,minmax(0,1fr));
@@ -442,9 +412,6 @@ body[data-page="gamedev"] {
     }
 
 
-/* GAMEDEV v1.1 — layout QA fixes */
-figure.shot { margin: 0; }
-
 /* Four GameDev cases should use the full desktop case-index width. */
 @media (min-width: 821px) {
   .case-index-list {
@@ -527,11 +494,6 @@ figure.shot { margin: 0; }
     width: min(45vw, 176px);
   }
 }
-
-/* Prevent long footer display text from forcing the CSS grid wider than viewport. */
-.footer-grid > * { min-width: 0; }
-.site-footer h2 { overflow-wrap: anywhere; }
-
 
 /* GAMEDEV v1.1 — KazAX visual motion refinement */
 .kazax-icon-stage__bg {

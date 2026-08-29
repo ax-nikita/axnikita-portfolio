@@ -2,6 +2,7 @@ import { createReadStream, existsSync, statSync } from "node:fs";
 import { createServer } from "node:http";
 import { extname, join, normalize, sep } from "node:path";
 import { fileURLToPath } from "node:url";
+import { SITE_BASE } from "./site-config.mjs";
 
 const root = normalize(join(fileURLToPath(new URL(".", import.meta.url)), ".."));
 const port = Number(process.env.PORT || 4173);
@@ -18,7 +19,16 @@ const contentTypes = {
 
 const resolvePath = (requestUrl) => {
   const url = new URL(requestUrl, `http://127.0.0.1:${port}`);
-  const pathname = decodeURIComponent(url.pathname);
+  let pathname = decodeURIComponent(url.pathname);
+
+  if (pathname === SITE_BASE.slice(0, -1)) {
+    pathname = SITE_BASE;
+  }
+
+  if (pathname.startsWith(SITE_BASE)) {
+    pathname = `/${pathname.slice(SITE_BASE.length)}`;
+  }
+
   let filePath = normalize(join(root, pathname));
 
   if (!filePath.startsWith(root + sep) && filePath !== root) return null;
@@ -46,5 +56,5 @@ const server = createServer((request, response) => {
 });
 
 server.listen(port, "127.0.0.1", () => {
-  console.log(`Static portfolio server: http://127.0.0.1:${port}/`);
+  console.log(`Static portfolio server: http://127.0.0.1:${port}${SITE_BASE}`);
 });

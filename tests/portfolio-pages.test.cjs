@@ -10,6 +10,12 @@ const pageEntries = [
   ["gamedev", "gamedev/index.html"],
 ];
 
+const expectedRoutes = [
+  "/axnikita-portfolio/",
+  "/axnikita-portfolio/web/",
+  "/axnikita-portfolio/gamedev/",
+];
+
 const readGeneratedCopy = () => {
   const source = read("assets/js/modules/page-copy.js");
   const json = source.match(/export const PAGE_COPY = ([\s\S]*);\s*$/)?.[1];
@@ -46,7 +52,32 @@ test("image references use organized assets/images paths", () => {
 
     assert.doesNotMatch(source, /\b(?:src|data-lightbox)="(?:\.\.\/)?assets\/(?:about|web|gamedev)\//);
     assert.doesNotMatch(source, /\b(?:src|data-lightbox)="reference\//);
+    assert.doesNotMatch(source, /\b(?:src|data-lightbox)="\/assets\//);
+    assert.match(source, /(?:src|data-lightbox)="(?:\.\.\/)?assets\/images\//);
   });
+});
+
+test("shared header uses GitHub Pages hrefs and preserves native spa links", () => {
+  const header = read("templates/header.html");
+
+  expectedRoutes.forEach((href) => {
+    assert.match(header, new RegExp(`href="${href}"\\s+spa`));
+  });
+
+  assert.doesNotMatch(header, /href="\/(?:web|gamedev)?\/?"/);
+});
+
+test("static page asset paths resolve inside the GitHub Pages subdirectory", () => {
+  const about = read("index.html");
+  const web = read("web/index.html");
+  const gamedev = read("gamedev/index.html");
+
+  assert.match(about, /href="assets\/css\/main\.css"/);
+  assert.match(about, /src="assets\/js\/site-runtime\.js"/);
+  assert.match(web, /href="\.\.\/assets\/css\/main\.css"/);
+  assert.match(web, /src="\.\.\/assets\/js\/site-runtime\.js"/);
+  assert.match(gamedev, /href="\.\.\/assets\/css\/main\.css"/);
+  assert.match(gamedev, /src="\.\.\/assets\/js\/site-runtime\.js"/);
 });
 
 test("legacy data-copy markers are backed by generated reference copy", () => {
@@ -69,4 +100,29 @@ test("scss uses modules instead of deprecated imports", () => {
   files.forEach((path) => {
     assert.doesNotMatch(read(path), /@import\b/);
   });
+});
+
+test("shared case styles are owned by components, not the WEB page partial", () => {
+  const webScss = read("assets/scss/pages/_web.scss");
+
+  [
+    ".web-hero",
+    ".case-index",
+    ".case-inner",
+    ".case-head",
+    ".case-title",
+    ".case-lead",
+    ".case-info",
+    ".gallery",
+    ".stack",
+    ".lightbox",
+  ].forEach((selector) => {
+    assert.doesNotMatch(webScss, new RegExp(`^\\s*${selector.replace(".", "\\.")}\\b`, "m"));
+  });
+
+  assert.match(read("assets/scss/components/_hero.scss"), /\.web-hero/);
+  assert.match(read("assets/scss/components/_case-index.scss"), /\.case-index/);
+  assert.match(read("assets/scss/components/_case.scss"), /\.case-inner/);
+  assert.match(read("assets/scss/components/_gallery.scss"), /\.gallery/);
+  assert.match(read("assets/scss/components/_lightbox.scss"), /\.lightbox/);
 });
