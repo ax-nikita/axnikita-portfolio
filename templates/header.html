@@ -1,21 +1,24 @@
 <header class="site-header" data-site-header>
   <div class="header-inner">
-    <a aria-label="Nikita - главная" class="brand" href="/axnikita-portfolio/" spa>
-      <span aria-hidden="true" class="brand-mark"></span>
+    <a class="brand" href="/axnikita-portfolio/" spa aria-label="Nikita — главная">
+      <span class="brand-mark" aria-hidden="true"></span>
       <span>axnikita / Zonov Nikita</span>
     </a>
-    <p class="site-role role" data-shell-field="role">Full-stack WEB developer · PHP / JavaScript / WordPress</p>
+
+    <p class="role" data-shell-role>Full-stack WEB developer · PHP / JavaScript / WordPress</p>
+
     <div class="header-actions">
-      <nav aria-label="Основная навигация" class="site-nav">
+      <nav class="site-nav" aria-label="Основная навигация">
         <ul>
-          <li><a data-page-key="about" data-lang-ru="Обо мне" data-lang-en="About" href="/axnikita-portfolio/" spa>Обо мне</a></li>
-          <li><a data-page-key="web" data-lang-ru="WEB" data-lang-en="WEB" href="/axnikita-portfolio/web/" spa>WEB</a></li>
-          <li><a data-page-key="gamedev" data-lang-ru="GameDev" data-lang-en="GameDev" href="/axnikita-portfolio/gamedev/" spa>GameDev</a></li>
+          <li><a href="/axnikita-portfolio/" spa data-page-link="about" data-lang-ru="Обо мне" data-lang-en="About">Обо мне</a></li>
+          <li><a href="/axnikita-portfolio/web/" spa data-page-link="web" data-lang-ru="WEB" data-lang-en="WEB">WEB</a></li>
+          <li><a href="/axnikita-portfolio/gamedev/" spa data-page-link="gamedev" data-lang-ru="GameDev" data-lang-en="GameDev">GameDev</a></li>
         </ul>
       </nav>
-      <div aria-label="Выбор языка" class="language-switcher" role="group">
-        <button aria-pressed="true" class="lang-button" data-lang-button="ru" type="button">RU</button>
-        <button aria-pressed="false" class="lang-button" data-lang-button="en" type="button">EN</button>
+
+      <div class="language-switcher" aria-label="Язык" role="group">
+        <button class="lang-button" type="button" data-lang-button="ru" aria-pressed="true">RU</button>
+        <button class="lang-button" type="button" data-lang-button="en" aria-pressed="false">EN</button>
       </div>
     </div>
   </div>

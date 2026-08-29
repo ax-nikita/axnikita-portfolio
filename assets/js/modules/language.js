@@ -1,11 +1,25 @@
+import { PAGE_COPY } from "../copy.js";
+
 const normalizeLang = (lang) => (lang === "en" ? "en" : "ru");
 
 export class LanguageController {
-  constructor(copyByPage) {
-    this.copyByPage = copyByPage;
-    this.storageKey = "portfolio-lang";
-    this.lang = this.readStoredLang();
+  constructor() {
+    this.lang = this.read();
     this.bound = false;
+  }
+
+  read() {
+    try {
+      return normalizeLang(localStorage.getItem("portfolio-lang"));
+    } catch (_) {
+      return "ru";
+    }
+  }
+
+  write() {
+    try {
+      localStorage.setItem("portfolio-lang", this.lang);
+    } catch (_) {}
   }
 
   bind() {
@@ -16,22 +30,8 @@ export class LanguageController {
       const button = event.target.closest("[data-lang-button]");
       if (!button) return;
       this.apply(button.dataset.langButton);
-      this.writeStoredLang();
+      this.write();
     });
-  }
-
-  readStoredLang() {
-    try {
-      return normalizeLang(localStorage.getItem(this.storageKey));
-    } catch (_) {
-      return "ru";
-    }
-  }
-
-  writeStoredLang() {
-    try {
-      localStorage.setItem(this.storageKey, this.lang);
-    } catch (_) {}
   }
 
   apply(lang = this.lang) {
@@ -39,37 +39,19 @@ export class LanguageController {
     document.documentElement.lang = this.lang;
     document.documentElement.dataset.lang = this.lang;
 
-    this.applyGeneratedCopy();
-    this.applyInlineCopy();
-    this.syncButtons();
-
-    document.dispatchEvent(new CustomEvent("portfolio:language-change", { detail: { lang: this.lang } }));
-  }
-
-  applyGeneratedCopy() {
     const pageKey = document.querySelector("main[data-page-key]")?.dataset.pageKey || "about";
-    const copy = this.copyByPage[pageKey]?.[this.lang] || {};
+    const copy = PAGE_COPY[pageKey]?.[this.lang] || {};
 
     document.querySelectorAll("[data-copy]").forEach((element) => {
       const value = copy[element.dataset.copy];
       if (value !== undefined) element.innerHTML = value;
     });
-  }
 
-  applyInlineCopy() {
     document.querySelectorAll("[data-lang-ru][data-lang-en]").forEach((element) => {
       const value = this.lang === "en" ? element.dataset.langEn : element.dataset.langRu;
-      if (value === undefined) return;
-
-      if (element.hasAttribute("data-lang-html")) {
-        element.innerHTML = value;
-      } else {
-        element.textContent = value;
-      }
+      if (value !== undefined) element.textContent = value;
     });
-  }
 
-  syncButtons() {
     document.querySelectorAll("[data-lang-button]").forEach((button) => {
       button.setAttribute("aria-pressed", String(button.dataset.langButton === this.lang));
     });
