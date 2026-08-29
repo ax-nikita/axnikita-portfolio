@@ -4,12 +4,6 @@ import { initAboutPage } from "./modules/about.js";
 import { CaseRailController } from "./modules/case-rail.js";
 import { initLightbox } from "./modules/lightbox.js";
 
-const PAGE_STYLES = {
-  about: "/axnikita-portfolio/assets/css/about.css",
-  web: "/axnikita-portfolio/assets/css/web.css",
-  gamedev: "/axnikita-portfolio/assets/css/gamedev.css",
-};
-
 class PortfolioApp {
   constructor() {
     this.language = new LanguageController();
@@ -28,14 +22,6 @@ class PortfolioApp {
     this.initPage();
   }
 
-  updatePageStyle(pageKey) {
-    const link = document.querySelector('link[data-page-style]');
-    const href = PAGE_STYLES[pageKey];
-    if (link && href && link.getAttribute("href") !== href) {
-      link.setAttribute("href", href);
-    }
-  }
-
   initPage() {
     this.pageCleanup();
     this.pageCleanup = () => {};
@@ -45,7 +31,9 @@ class PortfolioApp {
     if (!main) return;
 
     const pageKey = main.dataset.pageKey;
-    this.updatePageStyle(pageKey);
+
+    // The CSS bundle is already loaded. Switching data-page activates the
+    // corresponding scoped rules synchronously, without another CSS request.
     syncShell(this.language);
     this.language.apply();
 
